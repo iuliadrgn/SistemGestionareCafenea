@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.2-internal"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="Log_in.HomeAngajat">
+    <Text layoutX="240.0" layoutY="70.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Home Angajat">
+        <font>
+            <Font size="19.0"/>
+        </font>
+    </Text>
+    <Button layoutX="499.0" layoutY="24.0" mnemonicParsing="false" onAction="#LogOut" text="Log Out"/>
+</AnchorPane>
