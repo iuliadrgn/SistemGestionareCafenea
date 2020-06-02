@@ -45,7 +45,14 @@ public class LogIn {
        return;}
        else
         if(Objects.equals(username,"angajat")&& Objects.equals(password,"angajat"))
-        { LogInMessage.setText("Logged in as Angajat");
+        { try {
+            Stage stage = (Stage) LogInMessage.getScene().getWindow();
+            Parent AdmHome = FXMLLoader.load(getClass().getResource("/HomeAngajat.fxml"));
+            Scene scene = new Scene(AdmHome, 700, 500);
+            stage.setScene(scene);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
         return;}
         else
         if(Objects.equals(username,"furnizor")&& Objects.equals(password,"furnizor"))
