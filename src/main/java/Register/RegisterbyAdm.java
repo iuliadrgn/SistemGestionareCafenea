@@ -1,5 +1,6 @@
 package Register;
 
+import exceptions.UsernameAlreadyExistsException;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -11,6 +12,7 @@ import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
+import services.UserService;
 
 import java.io.IOException;
 
@@ -31,7 +33,29 @@ public class RegisterbyAdm {
 
 
     public void RegisterSomeone() {
-                return;
+        String username=usernameField.getText();
+        String password=passwordField.getText();
+        if(username==null|| username.length()==0)
+        {
+            registrationMessage.setText("Invalid e-mail adress");
+        }
+        else
+        if(role.getValue()==null)
+        {
+            registrationMessage.setText("Complete the choicebox!");
+        }
+        else
+        if(password==null||password.length()==0)
+        {
+            registrationMessage.setText("Invalid Password");
+        }
+        else
+            try {
+                UserService.addUser(usernameField.getText(), passwordField.getText(), role.getValue());
+                registrationMessage.setText("Account created successfully!");
+            } catch (UsernameAlreadyExistsException e) {
+                registrationMessage.setText(e.getMessage());
+            }
     }
 
     public void backButton(ActionEvent actionEvent) {
