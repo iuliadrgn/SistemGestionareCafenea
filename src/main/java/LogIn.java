@@ -47,8 +47,8 @@ public class LogIn {
         if(Objects.equals(username,"angajat")&& Objects.equals(password,"angajat"))
         { try {
             Stage stage = (Stage) LogInMessage.getScene().getWindow();
-            Parent AdmHome = FXMLLoader.load(getClass().getResource("/HomeAngajat.fxml"));
-            Scene scene = new Scene(AdmHome, 700, 500);
+            Parent AngHome = FXMLLoader.load(getClass().getResource("/HomeAngajat.fxml"));
+            Scene scene = new Scene(AngHome, 700, 500);
             stage.setScene(scene);
         } catch (IOException e) {
             e.printStackTrace();
@@ -56,7 +56,14 @@ public class LogIn {
         return;}
         else
         if(Objects.equals(username,"furnizor")&& Objects.equals(password,"furnizor"))
-        { LogInMessage.setText("Logged in as Furnizor");
+        { try {
+            Stage stage = (Stage) LogInMessage.getScene().getWindow();
+            Parent FurnHome = FXMLLoader.load(getClass().getResource("/HomeFurnizor.fxml"));
+            Scene scene = new Scene(FurnHome, 700, 500);
+            stage.setScene(scene);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
         return;
         }
 
