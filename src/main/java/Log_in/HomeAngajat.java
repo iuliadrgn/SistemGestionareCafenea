@@ -23,4 +23,8 @@ public class HomeAngajat {
             e.printStackTrace();
         }
     }
+
+    public void ChangePassword(ActionEvent actionEvent) {
+        return;
+    }
 }
