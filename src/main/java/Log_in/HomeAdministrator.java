@@ -8,6 +8,7 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.util.Objects;
 
 public class HomeAdministrator {
 
@@ -22,6 +23,19 @@ public class HomeAdministrator {
             stage.show();
             ((Node)(actionEvent.getSource())).getScene().getWindow().hide();
         }catch (IOException e){
+            e.printStackTrace();
+        }
+    }
+
+    public void registerAorF(ActionEvent actionEvent) {
+        try {
+            Stage stage = new Stage();
+            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("RegisterbyAdm.fxml")));
+            stage.setTitle("Sistem Gestionare Cafenea");
+            stage.setScene(new Scene(root, 500, 300));
+            stage.show();
+            ((Node) (actionEvent.getSource())).getScene().getWindow().hide();
+        }catch(IOException e){
             e.printStackTrace();
         }
     }
