@@ -39,4 +39,8 @@ public class HomeAdministrator {
             e.printStackTrace();
         }
     }
+
+    public void ChangePassword(ActionEvent actionEvent) {
+        return;
+    }
 }

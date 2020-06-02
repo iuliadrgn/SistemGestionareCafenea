@@ -8,4 +8,5 @@
     <Text layoutX="246.0" layoutY="68.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Home Administrator" />
     <Button layoutX="494.0" layoutY="24.0" mnemonicParsing="false" onAction="#LogOut" text="Log out" />
    <Button layoutX="466.0" layoutY="81.0" mnemonicParsing="false" onAction="#registerAorF" text="Register Someone" />
+   <Button layoutX="469.0" layoutY="137.0" mnemonicParsing="false" onAction="#ChangePassword" text="ChangePassword" />
 </AnchorPane>
