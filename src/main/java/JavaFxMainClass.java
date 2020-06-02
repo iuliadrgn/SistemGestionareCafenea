@@ -18,5 +18,6 @@ public class JavaFxMainClass extends Application {
         primaryStage.setTitle("Sistem Gestionare Cafenea");
         primaryStage.setScene(new Scene(root,500,300));
         primaryStage.show();
+
     }
 }

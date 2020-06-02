@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="300.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="LogIn">
+    <Label layoutX="138.0" layoutY="46.0" text="Sistem Gestionare Cafenea" textAlignment="JUSTIFY" textFill="#e40b0b">
+        <font>
+            <Font size="19.0" />
+        </font>
+    </Label>
+    <Label layoutX="93.0" layoutY="113.0" text="E-mail" />
+    <Label layoutX="93.0" layoutY="150.0" text="Password" />
+    <TextField fx:id="UsernameField" layoutX="176.0" layoutY="109.0" />
+    <PasswordField fx:id="PasswordField" layoutX="176.0" layoutY="146.0" />
+    <Button layoutX="224.0" layoutY="197.0" mnemonicParsing="false" onAction="#PressButton" text="Log In" />
+    <Text fx:id="LogInMessage" layoutX="176.0" layoutY="252.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="149.00000393390656" />
+</AnchorPane>
