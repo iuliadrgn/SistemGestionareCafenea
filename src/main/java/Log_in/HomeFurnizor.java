@@ -23,4 +23,8 @@ public class HomeFurnizor {
             e.printStackTrace();
         }
     }
+
+    public void ChangePassword(ActionEvent actionEvent) {
+        return;
+    }
 }
