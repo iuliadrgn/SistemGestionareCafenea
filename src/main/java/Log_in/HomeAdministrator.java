@@ -25,4 +25,8 @@ public class HomeAdministrator {
             e.printStackTrace();
         }
     }
+
+    public void registerAorF(ActionEvent actionEvent) {
+        return;
+    }
 }
