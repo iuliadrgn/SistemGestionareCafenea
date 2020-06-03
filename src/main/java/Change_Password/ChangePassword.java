@@ -13,6 +13,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+
 import javafx.scene.control.TextField;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
@@ -41,18 +42,19 @@ public class ChangePassword {
         String oldpassword = OldPasswordField.getText();
         String newpassword = NewPasswordField.getText();
         if (username == null || username.isEmpty()) {
-            ChangeMessage.setText("invalid e-mail");
+            ChangeMessage.setText("Invalid e-mail");
             return;
         } if (oldpassword == null || oldpassword.isEmpty()) {
             ChangeMessage.setText("Invalid password");
             return;
         }
-        if (newpassword == null || newpassword.isEmpty()) {
-            ChangeMessage.setText("Introduce new password");
+        if(newpassword==null||newpassword.isEmpty()){
+            ChangeMessage.setText("Introduce password");
             return;
         }
-        if (!Files.exists(USERS_PATH))
+        if (!Files.exists(USERS_PATH)) {
             FileUtils.copyURLToFile(Objects.requireNonNull(UserService.class.getClassLoader().getResource("users.json")), USERS_PATH.toFile());
+        }
 
         ObjectMapper objectMapper = new ObjectMapper();
         users = objectMapper.readValue(USERS_PATH.toFile(), new TypeReference<List<User>>() {
@@ -60,9 +62,9 @@ public class ChangePassword {
         for (User user : users) {
             String psw= Criptare.decrypt(user.getPassword(),user.getUsername());
             if (Objects.equals(username, user.getUsername()) && Objects.equals(oldpassword, psw)) {
+                ChangeMessage.setText("Password changed!");
                 user.setPassword(Criptare.encrypt(newpassword,username));
                 persistUsers();
-                ((Node)(actionEvent.getSource())).getScene().getWindow().hide();
                 return;
             }
         }
