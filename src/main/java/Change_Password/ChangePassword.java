@@ -62,9 +62,18 @@ public class ChangePassword {
         for (User user : users) {
             String psw= Criptare.decrypt(user.getPassword(),user.getUsername());
             if (Objects.equals(username, user.getUsername()) && Objects.equals(oldpassword, psw)) {
-                ChangeMessage.setText("Password changed!");
                 user.setPassword(Criptare.encrypt(newpassword,username));
                 persistUsers();
+                ((Node)(actionEvent.getSource())).getScene().getWindow().hide();
+                try {
+                    Stage stage = new Stage();
+                    Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("ChangedSuccessfully.fxml")));
+                    stage.setTitle("Sistem Gestionare Cafenea");
+                    stage.setScene(new Scene(root, 200, 100));
+                    stage.show();
+                }catch(IOException e){
+                    e.printStackTrace();
+                }
                 return;
             }
         }
