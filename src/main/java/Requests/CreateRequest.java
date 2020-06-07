@@ -12,5 +12,6 @@ public class CreateRequest {
     public Text RequestMessage;
 
     public void Okay(ActionEvent actionEvent) {
+        return;
     }
 }
