@@ -37,4 +37,8 @@ public class HomeAngajat {
             e.printStackTrace();
         }
     }
+
+    public void CreateRequest(ActionEvent actionEvent) {
+        return;
+    }
 }
