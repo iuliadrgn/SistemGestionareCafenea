@@ -53,6 +53,7 @@ public class CreateOffer {
         }
         else {
             OfferService.addOffer(product.getText(), price.getText(), number.getText(), state.getValue());
+            OfferMessage.setText("Offer created successfully!");
         }
     }
 
