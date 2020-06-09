@@ -5,18 +5,17 @@
 <?import javafx.scene.text.*?>
 
 <AnchorPane prefHeight="300.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Requests.CreateRequest">
-   <children>
-      <TextField fx:id="NameField" layoutX="190.0" layoutY="93.0" />
-      <TextField fx:id="NumberField" layoutX="190.0" layoutY="138.0" />
-      <ChoiceBox fx:id="UrgentField" layoutX="190.0" layoutY="188.0" prefWidth="150.0" />
-      <Label layoutX="104.0" layoutY="97.0" text="Produs" />
-      <Label layoutX="104.0" layoutY="142.0" text="Nr. bucati" />
-      <Label layoutX="112.0" layoutY="192.0" text="Urgent" />
-      <Label layoutX="188.0" layoutY="26.0" text="Create Request">
-         <font>
-            <Font size="23.0" />
-         </font>
-      </Label>
-      <Text fx:id="RequestMessage" layoutX="253.0" layoutY="282.0" strokeType="OUTSIDE" strokeWidth="0.0" />
-   </children>
+   <TextField fx:id="NameField" layoutX="190.0" layoutY="93.0" />
+   <TextField fx:id="NumberField" layoutX="190.0" layoutY="138.0" />
+   <ChoiceBox fx:id="UrgentField" layoutX="190.0" layoutY="188.0" prefWidth="150.0" />
+   <Label layoutX="104.0" layoutY="97.0" text="Produs" />
+   <Label layoutX="104.0" layoutY="142.0" text="Nr. bucati" />
+   <Label layoutX="112.0" layoutY="192.0" text="Urgent" />
+   <Label layoutX="188.0" layoutY="26.0" text="Create Request">
+      <font>
+         <Font size="23.0" />
+      </font>
+   </Label>
+   <Text fx:id="RequestMessage" layoutX="253.0" layoutY="282.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+   <Button layoutX="248.0" layoutY="226.0" mnemonicParsing="false" onAction="#Okay" text="OK" />
 </AnchorPane>
