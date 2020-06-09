@@ -50,4 +50,8 @@ public class HomeAngajat {
             e.printStackTrace();
         }
     }
+
+    public void CreateOffer(ActionEvent actionEvent) {
+        return;
+    }
 }
