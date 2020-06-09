@@ -1,5 +1,6 @@
 package Requests;
 
+import exceptions.RequestAlreadyExistsException;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.TextField;
 import javafx.scene.text.Text;
@@ -17,7 +18,7 @@ public class CreateRequest {
 
     public void initialize() {UrgentField.getItems().addAll("Da","Nu");
     }
-    public void Okay() throws IOException {
+    public void Okay() {
         String name=NameField.getText();
         String number=NumberField.getText();
         if(name==null|| name.length()==0)
@@ -34,10 +35,14 @@ public class CreateRequest {
         {
             RequestMessage.setText("Complete the number field");
         }
-        else {
-            addRequest(NameField.getText(), NumberField.getText(), UrgentField.getValue());
-            RequestMessage.setText("Created Successfully");
-        }
+        else
+            try {
+                RequestService.addRequest(NameField.getText(), NumberField.getText(), UrgentField.getValue());
+                RequestMessage.setText("Request created successfully!");
+            } catch (RequestAlreadyExistsException e) {
+                RequestMessage.setText(e.getMessage());
+            }
+
 
     }
 }

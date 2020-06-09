@@ -2,6 +2,7 @@ package services;
 
 
 import exceptions.CouldNotWriteRequestsException;
+import exceptions.RequestAlreadyExistsException;
 import models.Request;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -30,9 +31,17 @@ public class RequestService {
 
     }
 
-    public static void addRequest(String name, String number, String urgent) {
+    public static void addRequest(String name, String number, String urgent) throws RequestAlreadyExistsException {
+        checkRequestDoesNotAlreadyExist(name);
         requests.add(new Request(name,number,urgent));
         persistRequests();
+    }
+    private static void checkRequestDoesNotAlreadyExist(String name) throws RequestAlreadyExistsException {
+        for (Request re: requests) {
+            System.out.println("Request: " + re);
+            if (Objects.equals(name, re.getName()))
+                throw new RequestAlreadyExistsException(name);
+        }
     }
 
     private static void persistRequests() {
