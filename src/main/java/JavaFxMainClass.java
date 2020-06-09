@@ -3,6 +3,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import services.OfferService;
 import services.RequestService;
 import services.UserService;
 
@@ -16,10 +17,13 @@ public class JavaFxMainClass extends Application {
 
         UserService.loadUsersFromFile();
         RequestService.loadRequestFromFile();
+        OfferService.loadOffersFromFile();
+
         Parent root = FXMLLoader.load(getClass().getResource("/login.fxml"));
         primaryStage.setTitle("Sistem Gestionare Cafenea");
         primaryStage.setScene(new Scene(root,500,300));
         primaryStage.show();
+
     }
     public static void main(String[] args) {
         launch(args);

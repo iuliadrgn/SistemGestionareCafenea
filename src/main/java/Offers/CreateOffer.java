@@ -8,17 +8,25 @@ import javafx.scene.Scene;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
+import services.OfferService;
+
 
 import java.io.IOException;
 
 public class CreateOffer {
-    public ChoiceBox state;
+    public TextField product;
     public TextField price;
     public TextField number;
-    public TextField product;
+    public ChoiceBox<String> state;
 
-    public void ok(ActionEvent actionEvent) {
-        return;
+
+
+
+    public void initialize() {state.getItems().addAll("Fresh","Frozen");
+    }
+
+    public void ok(ActionEvent actionEvent) throws IOException {
+        OfferService.addOffer(product.getText(), price.getText(), number.getText(), state.getValue());
     }
 
     public void Back(ActionEvent actionEvent) {
