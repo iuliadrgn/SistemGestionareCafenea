@@ -19,4 +19,5 @@
    <Label layoutX="72.0" layoutY="161.0" text="Pret" />
    <Label layoutX="72.0" layoutY="199.0" text="Stare" />
    <Button layoutX="236.0" layoutY="244.0" mnemonicParsing="false" onAction="#ok" text="OK" />
+   <Button layoutX="31.0" layoutY="22.0" mnemonicParsing="false" onAction="#Back" text="Back" />
 </AnchorPane>
