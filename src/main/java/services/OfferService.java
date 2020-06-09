@@ -5,8 +5,11 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 
 import exceptions.CouldNotWriteOffersException;
 import exceptions.CouldNotWriteRequestsException;
+import exceptions.OfferAlreadyExistsException;
+import exceptions.RequestAlreadyExistsException;
 import models.Offer;
 
+import models.Request;
 import org.apache.commons.io.FileUtils;
 
 import java.io.IOException;
@@ -32,11 +35,20 @@ public class OfferService {
 
     }
 
-    public static void addOffer(String product,String price, String number, String state) throws IOException {
-
+    public static void addOffer(String product,String price, String number, String state) throws OfferAlreadyExistsException {
+        checkOfferDoesNotAlreadyExist(product);
         offers.add(new Offer(product,price,number,state));
         persistOffers();
     }
+
+    private static void checkOfferDoesNotAlreadyExist(String product) throws OfferAlreadyExistsException {
+        for (Offer of: offers) {
+            System.out.println("Offer: " + of);
+            if (Objects.equals(product, of.getProduct()))
+                throw new OfferAlreadyExistsException(product);
+        }
+    }
+
 
     private static void persistOffers(){
 

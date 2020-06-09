@@ -1,5 +1,7 @@
 package Offers;
 
+import exceptions.OfferAlreadyExistsException;
+import exceptions.RequestAlreadyExistsException;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
@@ -10,6 +12,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import services.OfferService;
+import services.RequestService;
 
 
 import java.io.IOException;
@@ -25,7 +28,7 @@ public class CreateOffer {
     public void initialize() {state.getItems().addAll("Fresh","Frozen");
     }
 
-    public void ok(ActionEvent actionEvent) throws IOException {
+    public void ok(ActionEvent actionEvent)  {
         String prd=product.getText();
         String prc=price.getText();
         String nr=number.getText();
@@ -51,9 +54,11 @@ public class CreateOffer {
             OfferMessage.setText("Complete the choicebox!");
 
         }
-        else {
-            OfferService.addOffer(product.getText(), price.getText(), number.getText(), state.getValue());
-            OfferMessage.setText("Offer created successfully!");
+        else  try {
+            OfferService.addOffer(product.getText(),price.getText(), number.getText(), state.getValue());
+            OfferMessage.setText("Request created successfully!");
+        } catch (OfferAlreadyExistsException e) {
+            OfferMessage.setText(e.getMessage());
         }
     }
 
