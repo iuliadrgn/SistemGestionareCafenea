@@ -16,7 +16,7 @@ import java.util.Objects;
 
 public class RequestService {
     private static List<Request> requests;
-    private static final Path REQUEST_PATH = FileSystemService.getPathToFile("config", "requests.json");
+    private static final Path REQUEST_PATH = FileSystemService.getPathToFile("req", "requests.json");
 
     public static void loadRequestFromFile() throws IOException {
 
