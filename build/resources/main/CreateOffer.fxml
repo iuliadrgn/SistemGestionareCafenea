@@ -10,14 +10,15 @@
          <Font size="25.0" />
       </font>
    </Label>
-   <ChoiceBox fx:id="state" layoutX="175.0" layoutY="195.0" prefWidth="150.0" />
-   <TextField fx:id="price" layoutX="178.0" layoutY="157.0" />
-   <TextField fx:id="number" layoutX="176.0" layoutY="118.0" />
-   <TextField fx:id="product" layoutX="176.0" layoutY="82.0" />
-   <Label layoutX="72.0" layoutY="86.0" text="Produs" />
-   <Label layoutX="72.0" layoutY="122.0" text="Numar bucati" />
-   <Label layoutX="72.0" layoutY="161.0" text="Pret" />
-   <Label layoutX="72.0" layoutY="199.0" text="Stare" />
-   <Button layoutX="236.0" layoutY="244.0" mnemonicParsing="false" onAction="#ok" text="OK" />
+   <ChoiceBox fx:id="state" layoutX="175.0" layoutY="187.0" prefWidth="150.0" />
+   <TextField fx:id="price" layoutX="176.0" layoutY="149.0" />
+   <TextField fx:id="number" layoutX="176.0" layoutY="110.0" />
+   <TextField fx:id="product" layoutX="178.0" layoutY="74.0" />
+   <Label layoutX="90.0" layoutY="78.0" text="Produs" />
+   <Label layoutX="83.0" layoutY="114.0" text="Numar bucati" />
+   <Label layoutX="98.0" layoutY="153.0" text="Pret" />
+   <Label layoutX="96.0" layoutY="191.0" text="Stare" />
+   <Button layoutX="234.0" layoutY="232.0" mnemonicParsing="false" onAction="#ok" text="OK" />
    <Button layoutX="31.0" layoutY="22.0" mnemonicParsing="false" onAction="#Back" text="Back" />
+   <Text fx:id="OfferMessage" layoutX="241.0" layoutY="282.0" strokeType="OUTSIDE" strokeWidth="0.0" />
 </AnchorPane>

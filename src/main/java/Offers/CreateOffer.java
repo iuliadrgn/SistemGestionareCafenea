@@ -7,6 +7,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.TextField;
+import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import services.OfferService;
 
@@ -18,15 +19,41 @@ public class CreateOffer {
     public TextField price;
     public TextField number;
     public ChoiceBox<String> state;
-
-
+    public Text OfferMessage;
 
 
     public void initialize() {state.getItems().addAll("Fresh","Frozen");
     }
 
     public void ok(ActionEvent actionEvent) throws IOException {
-        OfferService.addOffer(product.getText(), price.getText(), number.getText(), state.getValue());
+        String prd=product.getText();
+        String prc=price.getText();
+        String nr=number.getText();
+        if(prd==null|| prd.length()==0)
+        {
+            OfferMessage.setText("Complete the product field");
+
+        }
+        else
+        if(prc==null|| prc.length()==0)
+        {
+            OfferMessage.setText("Complete the price field");
+
+        }
+        else
+        if(nr==null||nr.length()==0)
+        {
+            OfferMessage.setText("Complete the number field");
+        }
+        else
+        if(state.getValue()==null)
+        {
+            OfferMessage.setText("Complete the choicebox!");
+
+        }
+        else {
+            OfferService.addOffer(product.getText(), price.getText(), number.getText(), state.getValue());
+        }
     }
 
     public void Back(ActionEvent actionEvent) {
