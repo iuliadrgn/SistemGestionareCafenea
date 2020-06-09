@@ -37,4 +37,17 @@ public class HomeFurnizor {
             e.printStackTrace();
         }
     }
+
+    public void CreateOffer(ActionEvent actionEvent) {
+        try {
+            Stage stage = new Stage();
+            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("CreateOffer.fxml")));
+            stage.setTitle("Sistem Gestionare Cafenea");
+            stage.setScene(new Scene(root, 500, 300));
+            stage.show();
+            ((Node) (actionEvent.getSource())).getScene().getWindow().hide();
+        }catch(IOException e){
+            e.printStackTrace();
+        }
+    }
 }
