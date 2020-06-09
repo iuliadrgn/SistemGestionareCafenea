@@ -36,6 +36,7 @@ public class CreateRequest {
         }
         else {
             addRequest(NameField.getText(), NumberField.getText(), UrgentField.getValue());
+            RequestMessage.setText("Created Successfully");
         }
 
     }
