@@ -51,7 +51,4 @@ public class HomeAngajat {
         }
     }
 
-    public void CreateOffer(ActionEvent actionEvent) {
-        return;
-    }
 }

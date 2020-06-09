@@ -12,4 +12,5 @@
     </Text>
     <Button layoutX="502.0" layoutY="14.0" mnemonicParsing="false" onAction="#LogOut" text="Log Out" />
    <Button layoutX="477.0" layoutY="59.0" mnemonicParsing="false" onAction="#ChangePassword" text="Change Password" />
+    <Button layoutX="503.0" layoutY="175.0" mnemonicParsing="false" onAction="#CreateOffer" text="Create Offer" />
 </AnchorPane>

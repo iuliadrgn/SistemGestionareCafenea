@@ -37,4 +37,8 @@ public class HomeFurnizor {
             e.printStackTrace();
         }
     }
+
+    public void CreateOffer(ActionEvent actionEvent) {
+        return;
+    }
 }
