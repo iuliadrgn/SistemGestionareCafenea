@@ -3,6 +3,8 @@ package services;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
+import exceptions.CouldNotWriteOffersException;
+import exceptions.CouldNotWriteRequestsException;
 import models.Offer;
 
 import org.apache.commons.io.FileUtils;
@@ -36,12 +38,14 @@ public class OfferService {
         persistOffers();
     }
 
+    private static void persistOffers(){
 
-    private static void persistOffers() throws IOException {
-
+        try {
             ObjectMapper objectMapper = new ObjectMapper();
             objectMapper.writerWithDefaultPrettyPrinter().writeValue(OFFER_PATH.toFile(), offers);
-
+        } catch (IOException e) {
+            throw new CouldNotWriteOffersException();
+        }
     }
 
 
