@@ -1,6 +1,7 @@
 package services;
 
 
+import exceptions.CouldNotWriteRequestsException;
 import models.Request;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -14,7 +15,7 @@ import java.util.Objects;
 
 public class RequestService {
     private static List<Request> requests;
-    private static final Path REQUEST_PATH = FileSystemService.getPathToFile("requests", "requests.json");
+    private static final Path REQUEST_PATH = FileSystemService.getPathToFile("config", "requests.json");
 
     public static void loadRequestFromFile() throws IOException {
 
@@ -24,19 +25,23 @@ public class RequestService {
 
         ObjectMapper objectMapper = new ObjectMapper();
 
-        requests = objectMapper.readValue(REQUEST_PATH.toFile(), new TypeReference<List<Request>>() {});
+        requests = objectMapper.readValue(REQUEST_PATH.toFile(), new TypeReference<List<Request>>() {
+        });
 
     }
 
-    public static void addRequest(String name, String number, String urgent) throws IOException {
+    public static void addRequest(String name, String number, String urgent) {
         requests.add(new Request(name,number,urgent));
         persistRequests();
     }
 
-
-    private static void persistRequests() throws IOException {
+    private static void persistRequests() {
+        try {
             ObjectMapper objectMapper = new ObjectMapper();
             objectMapper.writerWithDefaultPrettyPrinter().writeValue(REQUEST_PATH.toFile(), requests);
+        } catch (IOException e) {
+            throw new CouldNotWriteRequestsException();
+        }
     }
 
 
