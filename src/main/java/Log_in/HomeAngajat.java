@@ -51,4 +51,6 @@ public class HomeAngajat {
         }
     }
 
+    public void SeeOffers(ActionEvent actionEvent) {
+    }
 }
