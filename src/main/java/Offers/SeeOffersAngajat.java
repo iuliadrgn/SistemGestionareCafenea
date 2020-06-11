@@ -23,4 +23,7 @@ public class SeeOffersAngajat {
             e.printStackTrace();
         }
     }
+
+    public void OK(ActionEvent actionEvent) {
+    }
 }
