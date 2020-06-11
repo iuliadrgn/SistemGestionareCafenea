@@ -26,4 +26,7 @@ public class SeeOffersAngajat {
 
     public void OK(ActionEvent actionEvent) {
     }
+
+    public void Respinge(ActionEvent actionEvent) {
+    }
 }
