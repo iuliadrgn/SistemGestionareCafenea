@@ -63,4 +63,7 @@ public class HomeAngajat {
             e.printStackTrace();
         }
     }
+
+    public void SeeRequests(ActionEvent actionEvent) {
+    }
 }
