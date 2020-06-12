@@ -2,6 +2,7 @@ package Offers;
 
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import exceptions.CouldNotWriteOffersException;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -61,6 +62,21 @@ public class SeeOffersAngajat implements Initializable {
     }
 
     public void Respinge(ActionEvent actionEvent) {
+        Offer ofr=TableView.getSelectionModel().getSelectedItem();
+
+        offers.remove(ofr);
+        persistOffers();
+
+        TableView.getItems().removeAll(TableView.getSelectionModel().getSelectedItem());
+    }
+
+    private void persistOffers() {
+        try {
+            ObjectMapper objectMapper = new ObjectMapper();
+            objectMapper.writerWithDefaultPrettyPrinter().writeValue(OFFER_PATH.toFile(), offers);
+        } catch (IOException e) {
+            throw new CouldNotWriteOffersException();
+        }
     }
 
     @Override
