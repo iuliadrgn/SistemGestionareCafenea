@@ -13,4 +13,5 @@
          <TableColumn fx:id="urgent" prefWidth="148.0" text="urgent" />
      </columns>
    </TableView>
+   <Button layoutX="215.0" layoutY="261.0" mnemonicParsing="false" onAction="#Delete" text="Delete" />
 </AnchorPane>

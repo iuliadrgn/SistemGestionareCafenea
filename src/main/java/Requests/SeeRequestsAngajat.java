@@ -3,6 +3,7 @@ package Requests;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import exceptions.CouldNotWriteOffersException;
+import exceptions.CouldNotWriteRequestsException;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -32,7 +33,7 @@ import java.util.ResourceBundle;
 
 public class SeeRequestsAngajat implements Initializable {
     private static List<Request> requests;
-    private static final Path OFFER_PATH = FileSystemService.getPathToFile("req", "requests.json");
+    private static final Path REQUEST_PATH = FileSystemService.getPathToFile("req", "requests.json");
 
     @FXML
     public javafx.scene.control.TableView<Request> TableView;
@@ -77,17 +78,35 @@ public class SeeRequestsAngajat implements Initializable {
 
     private ObservableList<Request> getPeople() throws IOException {
         ObservableList<Request> cereri= FXCollections.observableArrayList();
-        if (!Files.exists(OFFER_PATH)) {
-            FileUtils.copyURLToFile(Objects.requireNonNull(OfferService.class.getClassLoader().getResource("requests.json")), OFFER_PATH.toFile());
+        if (!Files.exists(REQUEST_PATH)) {
+            FileUtils.copyURLToFile(Objects.requireNonNull(OfferService.class.getClassLoader().getResource("requests.json")), REQUEST_PATH.toFile());
         }
 
         ObjectMapper objectMapper = new ObjectMapper();
 
-        requests = objectMapper.readValue(OFFER_PATH.toFile(), new TypeReference<List<Request>>() {
+        requests = objectMapper.readValue(REQUEST_PATH.toFile(), new TypeReference<List<Request>>() {
         });
 
         cereri.addAll(requests);
         return cereri;
 
+    }
+
+    private static void persistRequests() {
+        try {
+            ObjectMapper objectMapper = new ObjectMapper();
+            objectMapper.writerWithDefaultPrettyPrinter().writeValue(REQUEST_PATH.toFile(), requests);
+        } catch (IOException e) {
+            throw new CouldNotWriteRequestsException();
+        }
+    }
+
+    public void Delete(ActionEvent actionEvent) {
+        Request req=TableView.getSelectionModel().getSelectedItem();
+
+        requests.remove(req);
+        persistRequests();
+
+        TableView.getItems().removeAll(TableView.getSelectionModel().getSelectedItem());
     }
 }
