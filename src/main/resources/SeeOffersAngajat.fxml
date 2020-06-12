@@ -6,7 +6,6 @@
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Offers.SeeOffersAngajat">
    <Label layoutX="262.0" layoutY="67.0" text="Offers" />
    <Button layoutX="32.0" layoutY="32.0" mnemonicParsing="false" onAction="#Back" text="Back" />
-   <Button layoutX="278.0" layoutY="348.0" mnemonicParsing="false" onAction="#OK" text="OK" />
    <Button layoutX="189.0" layoutY="348.0" mnemonicParsing="false" onAction="#Respinge" text="Respinge" />
    <TableView fx:id="TableView" layoutX="19.0" layoutY="106.0" prefHeight="200.0" prefWidth="550.0">
      <columns>

@@ -58,9 +58,6 @@ public class SeeOffersAngajat implements Initializable {
         }
     }
 
-    public void OK(ActionEvent actionEvent) {
-    }
-
     public void Respinge(ActionEvent actionEvent) {
         Offer ofr=TableView.getSelectionModel().getSelectedItem();
 
@@ -82,10 +79,10 @@ public class SeeOffersAngajat implements Initializable {
     @Override
     public void initialize(URL location, ResourceBundle resources) {
 
-        product.setCellValueFactory(new PropertyValueFactory<Offer, String>("product"));
-        price.setCellValueFactory(new PropertyValueFactory<Offer, String> ("price"));
-        number.setCellValueFactory(new PropertyValueFactory<Offer, String> ("number"));
-        state.setCellValueFactory(new PropertyValueFactory<Offer, String> ("state"));
+        product.setCellValueFactory(new PropertyValueFactory<>("product"));
+        price.setCellValueFactory(new PropertyValueFactory<>("price"));
+        number.setCellValueFactory(new PropertyValueFactory<>("number"));
+        state.setCellValueFactory(new PropertyValueFactory<>("state"));
 
         try {
             TableView.setItems(getPeople());
@@ -106,9 +103,7 @@ public class SeeOffersAngajat implements Initializable {
         offers = objectMapper.readValue(OFFER_PATH.toFile(), new TypeReference<List<Offer>>() {
         });
 
-        for(Offer i : offers){
-            oferte.add(i);
-        }
+        oferte.addAll(offers);
         return oferte;
 
     }
