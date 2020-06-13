@@ -8,11 +8,12 @@
    <Button layoutX="33.0" layoutY="21.0" mnemonicParsing="false" onAction="#Back" text="Back" />
    <TableView fx:id="TableView" layoutX="26.0" layoutY="58.0" prefHeight="191.0" prefWidth="440.0">
      <columns>
-       <TableColumn fx:id="name" prefWidth="139.0" text="name" />
-       <TableColumn fx:id="number" prefWidth="152.0" text="number" />
-         <TableColumn fx:id="urgent" prefWidth="148.0" text="urgent" />
+       <TableColumn fx:id="name" onEditCommit="#editName" prefWidth="139.0" text="name" />
+       <TableColumn fx:id="number" onEditCommit="#editNumber" prefWidth="152.0" text="number" />
+         <TableColumn fx:id="urgent" onEditCommit="#editUrgent" prefWidth="148.0" text="urgent" />
      </columns>
    </TableView>
    <Button layoutX="215.0" layoutY="261.0" mnemonicParsing="false" onAction="#Delete" text="Delete" />
    <Button layoutX="83.0" layoutY="261.0" mnemonicParsing="false" onAction="#Add" text="Add" />
+   <Button layoutX="361.0" layoutY="261.0" mnemonicParsing="false" onAction="#Edit" text="Edit" />
 </AnchorPane>

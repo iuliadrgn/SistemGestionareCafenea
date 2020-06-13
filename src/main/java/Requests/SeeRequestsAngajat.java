@@ -16,6 +16,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.control.cell.TextFieldTableCell;
 import javafx.stage.Stage;
 import models.Offer;
 import models.Request;
@@ -68,11 +69,16 @@ public class SeeRequestsAngajat implements Initializable {
         urgent.setCellValueFactory(new PropertyValueFactory<>("urgent"));
 
 
+
         try {
             TableView.setItems(getPeople());
         } catch (IOException e) {
             e.printStackTrace();
         }
+        TableView.setEditable(true);
+        name.setCellFactory((TextFieldTableCell.forTableColumn()));
+        number.setCellFactory((TextFieldTableCell.forTableColumn()));
+        urgent.setCellFactory((TextFieldTableCell.forTableColumn()));
 
     }
 
@@ -121,5 +127,25 @@ public class SeeRequestsAngajat implements Initializable {
         }catch(IOException e){
             e.printStackTrace();
         }
+    }
+
+    public void Edit(ActionEvent actionEvent) {
+        requests=TableView.getItems();
+        persistRequests();
+    }
+
+    public void editName(TableColumn.CellEditEvent<Request, String> requestStringCellEditEvent) {
+        Request req=TableView.getSelectionModel().getSelectedItem();
+        req.setName(requestStringCellEditEvent.getNewValue());
+    }
+
+    public void editNumber(TableColumn.CellEditEvent<Request, String> requestStringCellEditEvent) {
+        Request req=TableView.getSelectionModel().getSelectedItem();
+        req.setNumber(requestStringCellEditEvent.getNewValue());
+    }
+
+    public void editUrgent(TableColumn.CellEditEvent<Request, String> requestStringCellEditEvent) {
+        Request req=TableView.getSelectionModel().getSelectedItem();
+        req.setUrgent(requestStringCellEditEvent.getNewValue());
     }
 }
