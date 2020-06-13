@@ -44,6 +44,9 @@ public class SeeOffersAngajat implements Initializable {
     private TableColumn<Offer,String> number;
     @FXML
     private TableColumn<Offer,String> state;
+    @FXML
+    private TableColumn<Offer,String> numef;
+
     public void Back(ActionEvent actionEvent) {
         try{
             Parent log_in= FXMLLoader.load(getClass().getResource("/HomeAngajat.fxml"));
@@ -83,6 +86,7 @@ public class SeeOffersAngajat implements Initializable {
         price.setCellValueFactory(new PropertyValueFactory<>("price"));
         number.setCellValueFactory(new PropertyValueFactory<>("number"));
         state.setCellValueFactory(new PropertyValueFactory<>("state"));
+        numef.setCellValueFactory(new PropertyValueFactory<>("numef"));
 
         try {
             TableView.setItems(getPeople());

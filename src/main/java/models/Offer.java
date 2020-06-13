@@ -6,14 +6,19 @@ public class Offer {
     private String number;
     private String state;
 
+
+
+    private String numef;
+
     public Offer() {
     }
 
-    public Offer(String product,String price, String number, String state) {
+    public Offer(String product,String price, String number, String state,String numef) {
         this.product = product;
         this.price = price;
         this.number = number;
         this.state = state;
+        this.numef=numef;
     }
 
     public String getProduct() {
@@ -48,6 +53,14 @@ public class Offer {
         this.state = state;
     }
 
+    public String getNumef() {
+        return numef;
+    }
+
+    public void setNumef(String numef) {
+        this.numef = numef;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -58,6 +71,7 @@ public class Offer {
         if (!product.equals(ofr.product)) return false;
         if (!price.equals(ofr.price)) return false;
         if (!number.equals(ofr.number)) return false;
+        if (!numef.equals(ofr.numef)) return false;
         return state.equals(ofr.state);
     }
 
@@ -67,6 +81,7 @@ public class Offer {
         result = 31 * result + price.hashCode();
         result = 31 * result + number.hashCode();
         result = 31 * result + state.hashCode();
+        result = 31 * result + numef.hashCode();
         return result;
     }
 
@@ -77,6 +92,7 @@ public class Offer {
                 "price='" + price + '\'' +
                 ", number='" + number + '\'' +
                 ", state='" + state + '\'' +
+                ", numef='" + numef + '\'' +
                 '}';
     }
 }

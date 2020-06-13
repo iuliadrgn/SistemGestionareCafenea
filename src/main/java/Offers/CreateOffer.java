@@ -22,6 +22,7 @@ public class CreateOffer {
     public TextField price;
     public TextField number;
     public ChoiceBox<String> state;
+    public TextField numef;
     public Text OfferMessage;
 
 
@@ -32,6 +33,7 @@ public class CreateOffer {
         String prd=product.getText();
         String prc=price.getText();
         String nr=number.getText();
+        String num=numef.getText();
         if(prd==null|| prd.length()==0)
         {
             OfferMessage.setText("Complete the product field");
@@ -54,8 +56,13 @@ public class CreateOffer {
             OfferMessage.setText("Complete the choicebox!");
 
         }
+        else
+        if(num==null||num.length()==0)
+        {
+            OfferMessage.setText("Complete the numef field");
+        }
         else  try {
-            OfferService.addOffer(product.getText(),price.getText(), number.getText(), state.getValue());
+            OfferService.addOffer(product.getText(),price.getText(), number.getText(), state.getValue(),numef.getText());
             OfferMessage.setText("Request created successfully!");
         } catch (OfferAlreadyExistsException e) {
             OfferMessage.setText(e.getMessage());

@@ -56,7 +56,7 @@ public class HomeAngajat {
             Stage stage = new Stage();
             Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("SeeOffersAngajat.fxml")));
             stage.setTitle("Sistem Gestionare Cafenea");
-            stage.setScene(new Scene(root, 500, 300));
+            stage.setScene(new Scene(root, 600, 400));
             stage.show();
             ((Node) (actionEvent.getSource())).getScene().getWindow().hide();
         }catch(IOException e){
