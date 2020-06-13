@@ -15,4 +15,5 @@
          <TableColumn fx:id="state" prefWidth="155.79995727539062" text="state" />
      </columns>
    </TableView>
+   <Button layoutX="294.0" layoutY="348.0" mnemonicParsing="false" onAction="#Accept" text="Accept" />
 </AnchorPane>

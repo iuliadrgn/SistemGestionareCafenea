@@ -109,5 +109,17 @@ public class SeeOffersAngajat implements Initializable {
     }
 
     public void Accept(ActionEvent actionEvent) {
+        try{
+            Parent log_in= FXMLLoader.load(getClass().getResource("/CreateContract.fxml"));
+            Stage stage= new Stage();
+            stage.setTitle("Sistem Gestionare Cafenea");
+            Scene scene=new Scene(log_in,600,400);
+            stage.setScene(scene);
+            stage.show();
+            ((Node)(actionEvent.getSource())).getScene().getWindow().hide();
+        }catch (IOException e){
+            e.printStackTrace();
+        }
+
     }
 }
