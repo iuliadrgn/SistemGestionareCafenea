@@ -13,8 +13,8 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.control.cell.TextFieldTableCell;
 import javafx.stage.Stage;
 import models.Offer;
 import org.apache.commons.io.FileUtils;
@@ -73,6 +73,11 @@ public class SeeOffersFurnizor implements Initializable {
         } catch (IOException e) {
             e.printStackTrace();
         }
+        TableView.setEditable(true);
+        product.setCellFactory((TextFieldTableCell.forTableColumn()));
+        number.setCellFactory((TextFieldTableCell.forTableColumn()));
+        price.setCellFactory((TextFieldTableCell.forTableColumn()));
+        state.setCellFactory((TextFieldTableCell.forTableColumn()));
     }
     private ObservableList<Offer> getPeople() throws IOException {
         ObservableList<Offer> oferte= FXCollections.observableArrayList();
@@ -106,5 +111,28 @@ public class SeeOffersFurnizor implements Initializable {
         } catch (IOException e) {
             throw new CouldNotWriteOffersException();
         }
+    }
+
+    public void Edit(ActionEvent actionEvent) {
+        offers=TableView.getItems();
+        persistOffers();
+    }
+    public void editProduct(TableColumn.CellEditEvent<Offer, String> requestStringCellEditEvent) {
+        Offer ofr=TableView.getSelectionModel().getSelectedItem();
+        ofr.setProduct(requestStringCellEditEvent.getNewValue());
+    }
+
+    public void editNumber(TableColumn.CellEditEvent<Offer, String> requestStringCellEditEvent) {
+        Offer ofr=TableView.getSelectionModel().getSelectedItem();
+        ofr.setNumber(requestStringCellEditEvent.getNewValue());
+    }
+
+    public void editPrice(TableColumn.CellEditEvent<Offer, String> requestStringCellEditEvent) {
+        Offer ofr=TableView.getSelectionModel().getSelectedItem();
+        ofr.setPrice(requestStringCellEditEvent.getNewValue());
+    }
+    public void editState(TableColumn.CellEditEvent<Offer, String> requestStringCellEditEvent) {
+        Offer ofr=TableView.getSelectionModel().getSelectedItem();
+        ofr.setState(requestStringCellEditEvent.getNewValue());
     }
 }
