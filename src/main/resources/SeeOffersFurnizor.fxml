@@ -3,8 +3,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.2-internal"
-            xmlns:fx="http://javafx.com/fxml/1" fx:controller="Offers.SeeOffersFurnizor">
-   <Label layoutX="251.0" layoutY="24.0" prefHeight="38.0" prefWidth="74.0" text="See Offers"/>
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Offers.SeeOffersFurnizor">
+   <Label layoutX="251.0" layoutY="24.0" prefHeight="38.0" prefWidth="74.0" text="See Offers" />
+   <Button layoutX="32.0" layoutY="32.0" mnemonicParsing="false" onAction="#Back" text="Back" />
 </AnchorPane>
