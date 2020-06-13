@@ -3,20 +3,20 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.2-internal"
-            xmlns:fx="http://javafx.com/fxml/1" fx:controller="Contracts.CreateContract">
-   <Label layoutX="266.0" layoutY="25.0" text="Create Contract"/>
-   <Label layoutX="87.0" layoutY="73.0" text="Nume Furnizor"/>
-   <Label layoutX="99.0" layoutY="118.0" text="Produs"/>
-   <Label layoutX="113.0" layoutY="127.0"/>
-   <Label layoutX="107.0" layoutY="162.0" text="Pret"/>
-   <Label layoutX="92.0" layoutY="200.0" text="Nr. Bucati"/>
-   <Label layoutX="104.0" layoutY="239.0" text="Stare"/>
-   <Label layoutX="105.0" layoutY="274.0" text="Date"/>
-   <TextField layoutX="308.0" layoutY="69.0"/>
-   <TextField layoutX="308.0" layoutY="115.0"/>
-   <TextField layoutX="308.0" layoutY="158.0"/>
-   <TextField layoutX="308.0" layoutY="196.0"/>
-   <TextField layoutX="308.0" layoutY="235.0"/>
-   <TextField layoutX="308.0" layoutY="270.0"/>
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Contracts.CreateContract">
+   <Label layoutX="266.0" layoutY="25.0" text="Create Contract" />
+   <Label layoutX="87.0" layoutY="73.0" text="Nume Furnizor" />
+   <Label layoutX="99.0" layoutY="118.0" text="Produs" />
+   <Label layoutX="113.0" layoutY="127.0" />
+   <Label layoutX="107.0" layoutY="162.0" text="Pret" />
+   <Label layoutX="92.0" layoutY="200.0" text="Nr. Bucati" />
+   <Label layoutX="104.0" layoutY="239.0" text="Stare" />
+   <Label layoutX="105.0" layoutY="274.0" text="Date" />
+   <TextField layoutX="308.0" layoutY="69.0" />
+   <TextField layoutX="308.0" layoutY="115.0" />
+   <TextField layoutX="308.0" layoutY="158.0" />
+   <TextField layoutX="308.0" layoutY="196.0" />
+   <TextField layoutX="308.0" layoutY="235.0" />
+   <TextField layoutX="308.0" layoutY="270.0" />
+   <Button layoutX="240.0" layoutY="341.0" mnemonicParsing="false" onAction="#Ok" text="Ok" />
 </AnchorPane>
