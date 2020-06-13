@@ -135,4 +135,17 @@ public class SeeOffersFurnizor implements Initializable {
         Offer ofr=TableView.getSelectionModel().getSelectedItem();
         ofr.setState(requestStringCellEditEvent.getNewValue());
     }
+
+    public void Add(ActionEvent actionEvent) {
+        try {
+            Stage stage = new Stage();
+            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("AddOffer.fxml")));
+            stage.setTitle("Sistem Gestionare Cafenea");
+            stage.setScene(new Scene(root, 500, 300));
+            stage.show();
+            ((Node) (actionEvent.getSource())).getScene().getWindow().hide();
+        }catch(IOException e){
+            e.printStackTrace();
+        }
+    }
 }
