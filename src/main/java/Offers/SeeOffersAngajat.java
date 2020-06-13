@@ -107,4 +107,7 @@ public class SeeOffersAngajat implements Initializable {
         return oferte;
 
     }
+
+    public void Accept(ActionEvent actionEvent) {
+    }
 }
