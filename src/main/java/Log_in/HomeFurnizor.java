@@ -50,4 +50,7 @@ public class HomeFurnizor {
             e.printStackTrace();
         }
     }
+
+    public void SeeOffers(ActionEvent actionEvent) {
+    }
 }
