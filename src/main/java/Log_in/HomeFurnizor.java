@@ -63,4 +63,8 @@ public class HomeFurnizor {
             e.printStackTrace();
         }
     }
+
+    public void SeeRequests(ActionEvent actionEvent) {
+
+    }
 }
