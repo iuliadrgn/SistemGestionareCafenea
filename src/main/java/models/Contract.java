@@ -1,22 +1,31 @@
 package models;
 
-public class Offer {
+
+
+
+public class Contract {
     private String product;
     private String price;
     private String number;
     private String state;
     private String numef;
+    private String data;
 
-    public Offer() {
+
+    public Contract() {
     }
 
-    public Offer(String product,String price, String number, String state,String numef) {
+    public Contract(String product, String price, String number, String state, String numef, String data) {
         this.product = product;
         this.price = price;
         this.number = number;
         this.state = state;
         this.numef=numef;
+        this.data=data;
     }
+
+
+
 
     public String getProduct() {
         return product;
@@ -58,18 +67,27 @@ public class Offer {
         this.numef = numef;
     }
 
+    public String getData() {
+        return data;
+    }
+
+    public void setData(String data) {
+        this.data = data;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
 
-        models.Offer ofr = (models.Offer) o;
+        models.Contract con = (models.Contract) o;
 
-        if (!product.equals(ofr.product)) return false;
-        if (!price.equals(ofr.price)) return false;
-        if (!number.equals(ofr.number)) return false;
-        if (!numef.equals(ofr.numef)) return false;
-        return state.equals(ofr.state);
+        if (!product.equals(con.product)) return false;
+        if (!price.equals(con.price)) return false;
+        if (!number.equals(con.number)) return false;
+        if (!numef.equals(con.numef)) return false;
+        if (!data.equals(con.data)) return false;
+        return state.equals(con.state);
     }
 
     @Override
@@ -79,17 +97,19 @@ public class Offer {
         result = 31 * result + number.hashCode();
         result = 31 * result + state.hashCode();
         result = 31 * result + numef.hashCode();
+        result = 31 * result + data.hashCode();
         return result;
     }
 
     @Override
     public String toString() {
-        return "Offer{" +
+        return "Contract{" +
                 "product='" + product + '\'' +
                 "price='" + price + '\'' +
                 ", number='" + number + '\'' +
                 ", state='" + state + '\'' +
                 ", numef='" + numef + '\'' +
+                ", data='" + data + '\'' +
                 '}';
     }
 }

@@ -9,10 +9,13 @@
    <Button layoutX="189.0" layoutY="348.0" mnemonicParsing="false" onAction="#Respinge" text="Respinge" />
    <TableView fx:id="TableView" layoutX="19.0" layoutY="106.0" prefHeight="200.0" prefWidth="550.0">
      <columns>
-       <TableColumn fx:id="product" prefWidth="130.20001792907715" text="product" />
-       <TableColumn fx:id="price" prefWidth="118.39999389648438" text="price" />
-         <TableColumn fx:id="number" prefWidth="148.0" text="number" />
-         <TableColumn fx:id="state" prefWidth="155.79995727539062" text="state" />
+       <TableColumn fx:id="product" prefWidth="110" text="product" />
+       <TableColumn fx:id="price" prefWidth="110" text="price" />
+         <TableColumn fx:id="number" prefWidth="110" text="number" />
+         <TableColumn fx:id="state" prefWidth="110" text="state" />
+         <TableColumn fx:id="numef" prefWidth="110" text="numef" />
+         
      </columns>
    </TableView>
+   <Button layoutX="294.0" layoutY="348.0" mnemonicParsing="false" onAction="#Accept" text="Accept" />
 </AnchorPane>

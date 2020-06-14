@@ -30,6 +30,7 @@ import java.util.Objects;
 import java.util.ResourceBundle;
 
 public class SeeOffersAngajat implements Initializable {
+    public static Offer ofr;
     private static List<Offer> offers;
     private static final Path OFFER_PATH = FileSystemService.getPathToFile("ofr", "offers.json");
     @FXML
@@ -44,6 +45,9 @@ public class SeeOffersAngajat implements Initializable {
     private TableColumn<Offer,String> number;
     @FXML
     private TableColumn<Offer,String> state;
+    @FXML
+    private TableColumn<Offer,String> numef;
+
     public void Back(ActionEvent actionEvent) {
         try{
             Parent log_in= FXMLLoader.load(getClass().getResource("/HomeAngajat.fxml"));
@@ -83,6 +87,7 @@ public class SeeOffersAngajat implements Initializable {
         price.setCellValueFactory(new PropertyValueFactory<>("price"));
         number.setCellValueFactory(new PropertyValueFactory<>("number"));
         state.setCellValueFactory(new PropertyValueFactory<>("state"));
+        numef.setCellValueFactory(new PropertyValueFactory<>("numef"));
 
         try {
             TableView.setItems(getPeople());
@@ -105,6 +110,29 @@ public class SeeOffersAngajat implements Initializable {
 
         oferte.addAll(offers);
         return oferte;
+
+    }
+
+    public void Accept(ActionEvent actionEvent) {
+        ofr=TableView.getSelectionModel().getSelectedItem();
+        try{
+
+            Parent log_in= FXMLLoader.load(getClass().getResource("/CreateContract.fxml"));
+            Stage stage= new Stage();
+            stage.setTitle("Sistem Gestionare Cafenea");
+            Scene scene=new Scene(log_in,600,400);
+            stage.setScene(scene);
+            stage.show();
+            ((Node)(actionEvent.getSource())).getScene().getWindow().hide();
+        }catch (IOException e){
+            e.printStackTrace();
+        }
+
+    }
+
+    public static Offer metoda(){
+        return ofr;
+
 
     }
 }

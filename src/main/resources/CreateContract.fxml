@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Contracts.CreateContract">
+   <Label layoutX="266.0" layoutY="25.0" text="Create Contract" />
+   <Label layoutX="87.0" layoutY="73.0" text="Nume Furnizor" />
+   <Label layoutX="99.0" layoutY="118.0" text="Produs" />
+   <Label layoutX="113.0" layoutY="127.0" />
+   <Label layoutX="107.0" layoutY="162.0" text="Pret" />
+   <Label layoutX="92.0" layoutY="200.0" text="Nr. Bucati" />
+   <Label layoutX="104.0" layoutY="239.0" text="Stare" />
+   <Label layoutX="105.0" layoutY="274.0" text="Date" />
+   <TextField fx:id="numef" layoutX="308.0" layoutY="69.0" />
+   <TextField fx:id="product" layoutX="308.0" layoutY="115.0" />
+   <TextField fx:id="price" layoutX="308.0" layoutY="158.0" />
+   <TextField fx:id="number" layoutX="308.0" layoutY="196.0" />
+   <TextField fx:id="state" layoutX="308.0" layoutY="235.0" />
+   <Button layoutX="240.0" layoutY="341.0" mnemonicParsing="false" onAction="#Ok" text="Ok" />
+   <Button layoutX="24.0" layoutY="21.0" mnemonicParsing="false" onAction="#Back" text="Back" />
+   <Text fx:id="ContractMessage" layoutX="360.0" layoutY="346.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+   <DatePicker fx:id="data" layoutX="296.0" layoutY="279.0" />
+</AnchorPane>

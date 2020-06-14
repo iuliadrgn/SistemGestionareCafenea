@@ -35,9 +35,9 @@ public class OfferService {
 
     }
 
-    public static void addOffer(String product,String price, String number, String state) throws OfferAlreadyExistsException {
+    public static void addOffer(String product,String price, String number, String state,String numef) throws OfferAlreadyExistsException {
         checkOfferDoesNotAlreadyExist(product);
-        offers.add(new Offer(product,price,number,state));
+        offers.add(new Offer(product,price,number,state,numef));
         persistOffers();
     }
 
