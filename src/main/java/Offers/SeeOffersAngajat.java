@@ -30,6 +30,7 @@ import java.util.Objects;
 import java.util.ResourceBundle;
 
 public class SeeOffersAngajat implements Initializable {
+    public static Offer ofr;
     private static List<Offer> offers;
     private static final Path OFFER_PATH = FileSystemService.getPathToFile("ofr", "offers.json");
     @FXML
@@ -113,7 +114,9 @@ public class SeeOffersAngajat implements Initializable {
     }
 
     public void Accept(ActionEvent actionEvent) {
+        ofr=TableView.getSelectionModel().getSelectedItem();
         try{
+
             Parent log_in= FXMLLoader.load(getClass().getResource("/CreateContract.fxml"));
             Stage stage= new Stage();
             stage.setTitle("Sistem Gestionare Cafenea");
@@ -124,6 +127,12 @@ public class SeeOffersAngajat implements Initializable {
         }catch (IOException e){
             e.printStackTrace();
         }
+
+    }
+
+    public static Offer metoda(){
+        return ofr;
+
 
     }
 }

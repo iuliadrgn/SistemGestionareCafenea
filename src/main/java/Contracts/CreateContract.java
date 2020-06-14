@@ -1,6 +1,8 @@
 package Contracts;
 
+import Offers.SeeOffersAngajat;
 import exceptions.ContractAlreadyExistsException;
+import exceptions.UsernameAlreadyExistsException;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
@@ -11,6 +13,7 @@ import javafx.scene.control.DatePicker;
 import javafx.scene.control.TextField;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
+import models.Offer;
 import services.ContractService;
 
 
@@ -27,15 +30,28 @@ public class CreateContract {
     public DatePicker data;
     public Text ContractMessage;
 
+public void initialize(){
+Offer o= SeeOffersAngajat.metoda();
+product.setText(o.getProduct());
+price.setText(o.getPrice());
+number.setText(o.getNumber());
+numef.setText(o.getNumef());
+state.setText(o.getState());
+}
 
 
-    public void Ok(ActionEvent actionEvent) throws ContractAlreadyExistsException {
-
-            ContractService.addContract(product.getText(),price.getText(), number.getText(), state.getText(),numef.getText(),data.getValue().toString());
-            ContractMessage.setText("Contract created successfully!");
-
+    public void Ok(ActionEvent actionEvent) {
+        if(data.getValue()==null)
+        {ContractMessage.setText("Complete the date!"); }
+        else
+try {
+    ContractService.addContract(product.getText(), price.getText(), number.getText(), state.getText(), numef.getText(), data.getValue().toString());
+    ContractMessage.setText("Contract created successfully!");
+}catch(ContractAlreadyExistsException e) {
+            ContractMessage.setText(e.getMessage());}
 
     }
+
 
     public void Back(ActionEvent actionEvent) {
         try{
