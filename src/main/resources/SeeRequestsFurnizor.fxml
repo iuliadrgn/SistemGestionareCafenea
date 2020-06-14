@@ -13,4 +13,5 @@
             <TableColumn fx:id="urgent" prefWidth="168.4000244140625" text="urgent" />
         </columns>
     </TableView>
+    <Button layoutX="235.0" layoutY="321.0" mnemonicParsing="false" onAction="#CreateOffer" prefHeight="35.0" prefWidth="110.0" text="Create Offer" />
 </AnchorPane>
