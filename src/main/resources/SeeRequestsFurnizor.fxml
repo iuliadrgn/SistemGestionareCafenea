@@ -3,7 +3,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="SeeRequestsFurnizor">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Requests.SeeRequestsFurnizor">
     <Label layoutX="243.0" layoutY="50.0" text="See Requests" />
    <Button layoutX="27.0" layoutY="24.0" mnemonicParsing="false" onAction="#Back" text="Back" />
     <TableView fx:id="TableView" layoutX="62.0" layoutY="90.0" prefHeight="214.0" prefWidth="486.0">
