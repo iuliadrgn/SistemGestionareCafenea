@@ -52,4 +52,7 @@ public class HomeAdministrator {
                 e.printStackTrace();
             }
         }
+
+    public void SeeContracts(ActionEvent actionEvent) {
     }
+}
