@@ -5,9 +5,6 @@ public class Offer {
     private String price;
     private String number;
     private String state;
-
-
-
     private String numef;
 
     public Offer() {

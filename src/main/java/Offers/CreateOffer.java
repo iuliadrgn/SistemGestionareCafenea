@@ -63,7 +63,7 @@ public class CreateOffer {
         }
         else  try {
             OfferService.addOffer(product.getText(),price.getText(), number.getText(), state.getValue(),numef.getText());
-            OfferMessage.setText("Request created successfully!");
+            OfferMessage.setText("Offer created successfully!");
         } catch (OfferAlreadyExistsException e) {
             OfferMessage.setText(e.getMessage());
         }
