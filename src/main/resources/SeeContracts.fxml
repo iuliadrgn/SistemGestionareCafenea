@@ -6,4 +6,15 @@
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="SeeContracts">
    <Label layoutX="264.0" layoutY="39.0" text="See Contracts" />
    <Button layoutX="52.0" layoutY="35.0" mnemonicParsing="false" onAction="#Back" text="Back" />
+   <TableView fx:id="TableView" layoutX="19.0" layoutY="106.0" prefHeight="200.0" prefWidth="550.0">
+      <columns>
+         <TableColumn fx:id="product" prefWidth="94.0" text="product" />
+         <TableColumn fx:id="price" prefWidth="90.0" text="price" />
+         <TableColumn fx:id="number" prefWidth="91.0" text="number" />
+         <TableColumn fx:id="state" prefWidth="93.0" text="state" />
+         <TableColumn fx:id="numef" prefWidth="81.0" text="numef" />
+         <TableColumn fx:id="data" prefWidth="100.0" text="data" />
+
+      </columns>
+   </TableView>
 </AnchorPane>
