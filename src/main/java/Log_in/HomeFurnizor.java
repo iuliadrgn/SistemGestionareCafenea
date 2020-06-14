@@ -38,10 +38,11 @@ public class HomeFurnizor {
         }
     }
 
-    public void CreateOffer(ActionEvent actionEvent) {
+
+    public void SeeOffers(ActionEvent actionEvent) {
         try {
             Stage stage = new Stage();
-            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("CreateOffer.fxml")));
+            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("SeeOffersFurnizor.fxml")));
             stage.setTitle("Sistem Gestionare Cafenea");
             stage.setScene(new Scene(root, 600, 400));
             stage.show();
@@ -51,10 +52,10 @@ public class HomeFurnizor {
         }
     }
 
-    public void SeeOffers(ActionEvent actionEvent) {
+    public void SeeRequests(ActionEvent actionEvent) {
         try {
             Stage stage = new Stage();
-            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("SeeOffersFurnizor.fxml")));
+            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("SeeRequestsFurnizor.fxml")));
             stage.setTitle("Sistem Gestionare Cafenea");
             stage.setScene(new Scene(root, 600, 400));
             stage.show();
