@@ -48,4 +48,12 @@ public class UserServiceTest {
         assertNotNull(UserService.users);
         assertEquals(1, UserService.users.size());
     }
+    @Test
+    public void testAddTwoUsers() throws Exception {
+        UserService.loadUsersFromFile();
+        UserService.addUser("test1", "testPass1", "test2users");
+        UserService.addUser("test2", "testPass2", "test2users");
+        assertNotNull(UserService.users);
+        assertEquals(2, UserService.users.size());
+    }
 }
