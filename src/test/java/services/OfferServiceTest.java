@@ -43,5 +43,12 @@ public class OfferServiceTest {
         assertNotNull(OfferService.offers);
         Assert.assertEquals(0, OfferService.offers.size());
     }
+    @Test
+    public void testAddOneOffer() throws Exception {
+        OfferService.loadOffersFromFile();
+        OfferService.addOffer("test", "testPass", "test1user","test","Test");
+        assertNotNull(OfferService.offers);
+        assertEquals(1, OfferService.offers.size());
+    }
 
 }
