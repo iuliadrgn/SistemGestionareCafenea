@@ -65,5 +65,14 @@ public class OfferServiceTest {
         assertNotNull(OfferService.offers);
         OfferService.checkOfferDoesNotAlreadyExist("test1");
     }
+    @Test
+    public void testAddOneOfferIsPersisted() throws Exception {
+        OfferService.loadOffersFromFile();
+        OfferService.addOffer("test1", "testPass1", "test2user","test1","Test1");
+        List<Offer> offers = new ObjectMapper().readValue(OfferService.OFFER_PATH.toFile(), new TypeReference<List<Offer>>() {
+        });
+        assertNotNull(offers);
+        assertEquals(1, offers.size());
+    }
 
 }
