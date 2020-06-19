@@ -3,6 +3,12 @@ package services;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import org.junit.Before;
+import org.junit.BeforeClass;
+import org.junit.Test;
+
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotNull;
 
 public class FileSystemService {
     public static String APPLICATION_FOLDER = ".FISOnline";
@@ -21,4 +27,5 @@ public class FileSystemService {
     public static Path getApplicationHomePath() {
         return Paths.get(USER_FOLDER, APPLICATION_FOLDER);
     }
+
 }
