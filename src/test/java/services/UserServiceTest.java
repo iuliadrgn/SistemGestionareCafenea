@@ -80,4 +80,14 @@ public class UserServiceTest {
         UserService.checkUserDoesNotAlreadyExist("test1");
     }
 
+    @Test
+    public void testAddOneUserIsPersisted() throws Exception {
+        UserService.loadUsersFromFile();
+        UserService.addUser("test", "testPass", "test1user");
+        List<User> users = new ObjectMapper().readValue(UserService.USERS_PATH.toFile(), new TypeReference<List<User>>() {
+        });
+        assertNotNull(users);
+        assertEquals(1, users.size());
+    }
+
 }
