@@ -72,4 +72,12 @@ public class UserServiceTest {
         assertNotNull(UserService.users);
         assertEquals(10, UserService.users.size());
     }
+    @Test(expected = UsernameAlreadyExistsException.class)
+    public void testAddUserAlreadyExists() throws Exception {
+        UserService.loadUsersFromFile();
+        UserService.addUser("test1", "testPass1", "test1");
+        assertNotNull(UserService.users);
+        UserService.checkUserDoesNotAlreadyExist("test1");
+    }
+
 }
