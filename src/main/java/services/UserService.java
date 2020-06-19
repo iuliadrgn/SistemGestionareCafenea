@@ -54,6 +54,9 @@ public class UserService {
             throw new CouldNotWriteUsersException();
         }
     }
+    public static List<User> getUsers() {
+        return users;
+    }
 
 }
 

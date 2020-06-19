@@ -19,8 +19,8 @@ import java.util.List;
 import java.util.Objects;
 
 public class OfferService {
-    private static List<Offer> offers;
-    private static final Path OFFER_PATH = FileSystemService.getPathToFile("ofr", "offers.json");
+    public static List<Offer> offers;
+    public static final Path OFFER_PATH = FileSystemService.getPathToFile("ofr", "offers.json");
 
     public static void loadOffersFromFile() throws IOException {
 
@@ -41,7 +41,7 @@ public class OfferService {
         persistOffers();
     }
 
-    private static void checkOfferDoesNotAlreadyExist(String product) throws OfferAlreadyExistsException {
+    public static void checkOfferDoesNotAlreadyExist(String product) throws OfferAlreadyExistsException {
         for (Offer of: offers) {
             System.out.println("Offer: " + of);
             if (Objects.equals(product, of.getProduct()))
