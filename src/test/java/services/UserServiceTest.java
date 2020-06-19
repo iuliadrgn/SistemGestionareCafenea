@@ -89,5 +89,15 @@ public class UserServiceTest {
         assertNotNull(users);
         assertEquals(1, users.size());
     }
+    @Test
+    public void testAddTwoUsersArePersisted() throws Exception {
+        UserService.loadUsersFromFile();
+        UserService.addUser("test1", "testPass1", "test2users");
+        UserService.addUser("test2", "testPass2", "test2users");
+        List<User> users = new ObjectMapper().readValue(UserService.USERS_PATH.toFile(), new TypeReference<List<User>>() {
+        });
+        assertNotNull(users);
+        assertEquals(2, users.size());
+    }
 
 }
