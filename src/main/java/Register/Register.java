@@ -18,13 +18,13 @@ import java.io.IOException;
 
 public class Register {
     @FXML
-    private Text registrationMessage;
+     Text registrationMessage;
     @FXML
-    private PasswordField passwordField;
+     PasswordField passwordField;
     @FXML
-    private TextField usernameField;
+     TextField usernameField;
     @FXML
-    private ChoiceBox<String> role;
+     ChoiceBox<String> role;
 
     @FXML
     public void initialize() {

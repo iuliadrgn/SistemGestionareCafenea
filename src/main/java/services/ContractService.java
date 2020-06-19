@@ -18,8 +18,8 @@ import java.util.List;
 import java.util.Objects;
 
 public class ContractService {
-    private static List<Contract> contracts;
-    private static final Path CONTRACT_PATH = FileSystemService.getPathToFile("contracts", "contracts.json");
+    public static List<Contract> contracts;
+    public static final Path CONTRACT_PATH = FileSystemService.getPathToFile("contracts", "contracts.json");
 
     public static void loadContractsFromFile() throws IOException {
 
@@ -41,7 +41,7 @@ public class ContractService {
         persistContracts();
     }
 
-    private static void checkContractDoesNotAlreadyExist(String product) throws ContractAlreadyExistsException {
+    public static void checkContractDoesNotAlreadyExist(String product) throws ContractAlreadyExistsException {
         for (Contract co: contracts) {
             System.out.println("Contract: " + co);
             if (Objects.equals(product, co.getProduct()))

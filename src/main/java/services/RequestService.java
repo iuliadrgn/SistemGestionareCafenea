@@ -15,8 +15,8 @@ import java.util.List;
 import java.util.Objects;
 
 public class RequestService {
-    private static List<Request> requests;
-    private static final Path REQUEST_PATH = FileSystemService.getPathToFile("req", "requests.json");
+    public static List<Request> requests;
+    public static final Path REQUEST_PATH = FileSystemService.getPathToFile("req", "requests.json");
 
     public static void loadRequestFromFile() throws IOException {
 
@@ -36,7 +36,7 @@ public class RequestService {
         requests.add(new Request(name,number,urgent));
         persistRequests();
     }
-    private static void checkRequestDoesNotAlreadyExist(String name) throws RequestAlreadyExistsException {
+    public static void checkRequestDoesNotAlreadyExist(String name) throws RequestAlreadyExistsException {
         for (Request re: requests) {
             System.out.println("Request: " + re);
             if (Objects.equals(name, re.getName()))

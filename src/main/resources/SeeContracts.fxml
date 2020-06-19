@@ -3,7 +3,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="SeeContracts">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Contracts.SeeContracts">
    <Label layoutX="264.0" layoutY="39.0" text="See Contracts" />
    <Button layoutX="52.0" layoutY="35.0" mnemonicParsing="false" onAction="#Back" text="Back" />
    <TableView fx:id="TableView" layoutX="19.0" layoutY="106.0" prefHeight="200.0" prefWidth="550.0">
