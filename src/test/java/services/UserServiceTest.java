@@ -117,5 +117,9 @@ public class UserServiceTest {
         assertNotNull(users);
         assertEquals(10, users.size());
     }
+    @Test
+    public void testPasswordEncrypt() {
+        assertNotEquals("testPass1", Criptare.encrypt("username1", "testPass1"));
+    }
 
 }
