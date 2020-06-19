@@ -42,4 +42,12 @@ public class ContractServiceTest {
         assertNotNull(ContractService.contracts);
         Assert.assertEquals(0, ContractService.contracts.size());
     }
+
+    @Test
+    public void testAddOneContract() throws Exception {
+        ContractService.loadContractsFromFile();
+        ContractService.addContract("test", "testPass", "test1user","test1","Test1","11/11/1111");
+        assertNotNull(ContractService.contracts);
+        assertEquals(1, ContractService.contracts.size());
+    }
 }
