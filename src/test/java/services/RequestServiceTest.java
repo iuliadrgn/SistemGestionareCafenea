@@ -64,5 +64,14 @@ public class RequestServiceTest {
         assertNotNull(RequestService.requests);
         RequestService.checkRequestDoesNotAlreadyExist("test1");
     }
+    @Test
+    public void testAddOneRequestIsPersisted() throws Exception {
+        RequestService.loadRequestFromFile();
+        RequestService.addRequest("test1", "testPass1", "test2user");
+        List<Request> requests = new ObjectMapper().readValue(RequestService.REQUEST_PATH.toFile(), new TypeReference<List<Request>>() {
+        });
+        assertNotNull(requests);
+        assertEquals(1, requests.size());
+    }
 
 }
