@@ -42,4 +42,12 @@ public class RequestServiceTest {
         assertNotNull(RequestService.requests);
         Assert.assertEquals(0, RequestService.requests.size());
     }
+    @Test
+    public void testAddOneRequest() throws Exception {
+        RequestService.loadRequestFromFile();
+        RequestService.addRequest("test", "testPass", "test1user");
+        assertNotNull(RequestService.requests);
+        assertEquals(1, RequestService.requests.size());
+    }
+
 }
