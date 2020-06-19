@@ -58,4 +58,11 @@ public class ContractServiceTest {
         assertNotNull(ContractService.contracts);
         assertEquals(2, ContractService.contracts.size());
     }
+    @Test(expected = ContractAlreadyExistsException.class)
+    public void testAddContractAlreadyExists() throws Exception {
+        ContractService.loadContractsFromFile();
+        ContractService.addContract("test1", "testPass1", "test1user","test1","Test1","11/11/1111");
+        assertNotNull(ContractService.contracts);
+        ContractService.checkContractDoesNotAlreadyExist("test1");
+    }
 }
