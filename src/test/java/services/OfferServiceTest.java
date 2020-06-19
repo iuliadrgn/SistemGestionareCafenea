@@ -58,5 +58,12 @@ public class OfferServiceTest {
         assertNotNull(OfferService.offers);
         assertEquals(2, OfferService.offers.size());
     }
+    @Test(expected = OfferAlreadyExistsException.class)
+    public void testAddOfferAlreadyExists() throws Exception {
+        OfferService.loadOffersFromFile();
+        OfferService.addOffer("test1", "testPass1", "test2user","test1","Test1");
+        assertNotNull(OfferService.offers);
+        OfferService.checkOfferDoesNotAlreadyExist("test1");
+    }
 
 }
