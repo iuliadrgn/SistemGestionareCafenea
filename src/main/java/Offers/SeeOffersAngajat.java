@@ -122,6 +122,9 @@ public class SeeOffersAngajat implements Initializable {
             Scene scene=new Scene(log_in,600,400);
             stage.setScene(scene);
             stage.show();
+            offers.remove(ofr);
+            persistOffers();
+            TableView.getItems().removeAll(TableView.getSelectionModel().getSelectedItem());
             ((Node)(actionEvent.getSource())).getScene().getWindow().hide();
         }catch (IOException e){
             e.printStackTrace();

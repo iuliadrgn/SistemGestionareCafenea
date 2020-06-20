@@ -55,7 +55,7 @@ public class AddRequest {
             Parent log_in= FXMLLoader.load(getClass().getResource("/Requests/SeeRequestsAngajat.fxml"));
             Stage stage= new Stage();
             stage.setTitle("Sistem Gestionare Cafenea");
-            Scene scene=new Scene(log_in,500,300);
+            Scene scene=new Scene(log_in,600,400);
             stage.setScene(scene);
             stage.show();
             ((Node)(actionEvent.getSource())).getScene().getWindow().hide();

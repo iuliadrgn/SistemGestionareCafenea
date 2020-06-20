@@ -27,7 +27,7 @@
             <TableColumn fx:id="price" prefWidth="102.0" text="price" />
             <TableColumn fx:id="number" prefWidth="111.0" text="number" />
             <TableColumn fx:id="state" prefWidth="111.0" text="state" />
-            <TableColumn fx:id="numef" prefWidth="98.0" text="numef" />
+            <TableColumn fx:id="numef" prefWidth="98.0" text="furnizor name" />
 
         </columns>
     </TableView>
