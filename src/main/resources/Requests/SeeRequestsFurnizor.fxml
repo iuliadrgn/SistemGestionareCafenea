@@ -6,8 +6,8 @@
 <?import javafx.scene.text.*?>
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #3b9475;" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Requests.SeeRequestsFurnizor">
-    <ImageView fitHeight="439.0" fitWidth="608.0" opacity="0.61" pickOnBounds="true" preserveRatio="true">
-        <Image url="@../images/coffee25.jpg"/>
+    <ImageView fitHeight="430.0" fitWidth="600.0" opacity="0.61" pickOnBounds="true" preserveRatio="true">
+        <Image url="@../images/coffee25.jpg" />
     </ImageView>
     <Label layoutX="152.0" text="See Requests" textFill="WHITE">
         <font>
@@ -17,14 +17,14 @@
         <font>
             <Font size="13.0" />
         </font></Button>
-    <TableView fx:id="TableView" layoutX="36.0" layoutY="80.0" opacity="0.85" prefHeight="277.0" prefWidth="527.0" style="-fx-background-color: #eb984f;">
+    <TableView fx:id="TableView" layoutX="36.0" layoutY="80.0" opacity="0.85" prefHeight="258.0" prefWidth="527.0" style="-fx-background-color: #eb984f;">
         <columns>
             <TableColumn fx:id="name" prefWidth="166.0" text="name" />
             <TableColumn fx:id="number" prefWidth="170.0" text="number" />
             <TableColumn fx:id="urgent" prefWidth="190.0" text="urgent" />
         </columns>
     </TableView>
-    <Button layoutX="245.0" layoutY="364.0" mnemonicParsing="false" onAction="#CreateOffer" opacity="0.84" prefHeight="35.0" prefWidth="110.0" style="-fx-background-color: #ba5d1a;" text="Create Offer" textFill="WHITE">
+    <Button layoutX="245.0" layoutY="350.0" mnemonicParsing="false" onAction="#CreateOffer" opacity="0.84" prefHeight="35.0" prefWidth="110.0" style="-fx-background-color: #ba5d1a;" text="Create Offer" textFill="WHITE">
         <font>
             <Font size="13.0" />
         </font></Button>

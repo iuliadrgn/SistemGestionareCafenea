@@ -20,7 +20,7 @@ public class CreateRequest {
     public ChoiceBox<String> UrgentField;
     public Text RequestMessage;
 
-    public void initialize() {UrgentField.getItems().addAll("Da","Nu");
+    public void initialize() {UrgentField.getItems().addAll("Yes","No");
     }
     public void Okay() {
         String name=NameField.getText();

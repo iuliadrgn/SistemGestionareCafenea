@@ -7,7 +7,7 @@
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #7a2137;" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Contracts.SeeContracts">
    <ImageView fitHeight="402.0" fitWidth="600.0" layoutX="-1.0" opacity="0.54" pickOnBounds="true" preserveRatio="true">
-      <Image url="@../images/coffee17.jpg"/>
+      <Image url="@../images/coffee17.jpg" />
    </ImageView>
    <Label layoutX="200.0" layoutY="24.0" text="See Contracts" textFill="#a4bcbd">
       <font>
@@ -23,7 +23,7 @@
          <TableColumn fx:id="price" prefWidth="90.0" text="price" />
          <TableColumn fx:id="number" prefWidth="91.0" text="number" />
          <TableColumn fx:id="state" prefWidth="93.0" text="state" />
-         <TableColumn fx:id="numef" prefWidth="87.0" text="numef" />
+         <TableColumn fx:id="numef" prefWidth="87.0" text="furnizor name" />
          <TableColumn fx:id="data" prefWidth="104.0" text="data" />
 
       </columns>

@@ -36,7 +36,7 @@ public class Register {
         String username = usernameField.getText();
         String password = passwordField.getText();
         if (username == null || username.length() == 0) {
-            registrationMessage.setText("Invalid e-mail adress");
+            registrationMessage.setText("Invalid username");
         } else if (role.getValue() == null) {
             registrationMessage.setText("Complete the choicebox!");
         } else if (password == null || password.length() == 0) {

@@ -1,30 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.ChoiceBox?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.TextField?>
-<?import javafx.scene.effect.ColorAdjust?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
-<?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.text.Font?>
-<?import javafx.scene.text.Text?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="380.0" prefWidth="500.0" style="-fx-background-color: #99291e;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Requests.AddRequest">
-    <ImageView fitHeight="403.0" fitWidth="356.0" layoutX="144.0" layoutY="-1.0" opacity="0.57" pickOnBounds="true"
-               preserveRatio="true">
-        <Image url="@../images/coffee13.jpg"/>
+<AnchorPane prefHeight="380.0" prefWidth="500.0" style="-fx-background-color: #99291e;" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Requests.AddRequest">
+    <ImageView fitHeight="403.0" fitWidth="356.0" layoutX="144.0" layoutY="-1.0" opacity="0.57" pickOnBounds="true" preserveRatio="true">
+        <Image url="@../images/coffee13.jpg" />
     </ImageView>
-    <TextField fx:id="NameField" layoutX="22.0" layoutY="92.0" prefHeight="25.0" prefWidth="167.0" promptText="Produs" style="-fx-background-color: #e9d790;">
+    <TextField fx:id="NameField" layoutX="22.0" layoutY="92.0" prefHeight="25.0" prefWidth="167.0" promptText="Product" style="-fx-background-color: #e9d790;">
         <opaqueInsets>
             <Insets />
         </opaqueInsets>
         <effect>
             <ColorAdjust brightness="-0.12" contrast="0.17" saturation="0.19" />
         </effect></TextField>
-    <TextField fx:id="NumberField" layoutX="22.0" layoutY="138.0" prefHeight="25.0" prefWidth="167.0" promptText="Numar bucati" style="-fx-background-color: #e9d790;">
+    <TextField fx:id="NumberField" layoutX="22.0" layoutY="138.0" prefHeight="25.0" prefWidth="167.0" promptText="Number" style="-fx-background-color: #e9d790;">
         <effect>
             <ColorAdjust brightness="-0.12" contrast="0.17" saturation="0.19" />
         </effect></TextField>
