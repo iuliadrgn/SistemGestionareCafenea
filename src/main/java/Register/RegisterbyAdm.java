@@ -40,14 +40,14 @@ public class RegisterbyAdm {
             registrationMessage.setText("Invalid username!");
         }
         else
-        if(role.getValue()==null)
-        {
-            registrationMessage.setText("Complete the choicebox!");
-        }
-        else
         if(password==null||password.length()==0)
         {
             registrationMessage.setText("Invalid password!");
+        }
+        else
+        if(role.getValue()==null)
+        {
+            registrationMessage.setText("Complete the choicebox!");
         }
         else
             try {

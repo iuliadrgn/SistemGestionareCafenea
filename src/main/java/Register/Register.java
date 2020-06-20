@@ -37,11 +37,16 @@ public class Register {
         String password = passwordField.getText();
         if (username == null || username.length() == 0) {
             registrationMessage.setText("Invalid username!");
-        } else if (role.getValue() == null) {
-            registrationMessage.setText("Complete the choicebox!");
-        } else if (password == null || password.length() == 0) {
+        }
+        else
+            if (password == null || password.length() == 0) {
             registrationMessage.setText("Invalid password!");
-        } else
+        }
+        else
+            if (role.getValue() == null) {
+            registrationMessage.setText("Complete the choicebox!");
+        }
+            else
             try {
 
                 UserService.addUser(usernameField.getText(), passwordField.getText(), role.getValue().toString());
