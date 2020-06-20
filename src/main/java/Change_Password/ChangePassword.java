@@ -42,19 +42,22 @@ public class ChangePassword {
         String oldpassword = OldPasswordField.getText();
         String newpassword = NewPasswordField.getText();
         if (username == null || username.isEmpty()) {
-            ChangeMessage.setText("Invalid e-mail");
-            return;
-        } if (oldpassword == null || oldpassword.isEmpty()) {
-            ChangeMessage.setText("Invalid password");
+            ChangeMessage.setText("Invalid username!");
             return;
         }
+        else
+            if (oldpassword == null || oldpassword.isEmpty()) {
+            ChangeMessage.setText("Invalid password!");return;
+        } else
         if(newpassword==null||newpassword.isEmpty()){
-            ChangeMessage.setText("Introduce password");
-            return;
+            ChangeMessage.setText("Introduce password!");return;
         }
+        else
         if (!Files.exists(USERS_PATH)) {
             FileUtils.copyURLToFile(Objects.requireNonNull(UserService.class.getClassLoader().getResource("Register/users.json")), USERS_PATH.toFile());
         }
+        else
+            ChangeMessage.setText("Invalid credentials!");
 
         ObjectMapper objectMapper = new ObjectMapper();
         users = objectMapper.readValue(USERS_PATH.toFile(), new TypeReference<List<User>>() {
@@ -77,9 +80,6 @@ public class ChangePassword {
                 return;
             }
         }
-
-
-        ChangeMessage.setText("Invalid credentials");
     }
 
     private void persistUsers() {
