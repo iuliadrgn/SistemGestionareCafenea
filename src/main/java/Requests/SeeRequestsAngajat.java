@@ -48,7 +48,7 @@ public class SeeRequestsAngajat implements Initializable {
             Parent log_in= FXMLLoader.load(getClass().getResource("/HomeUsers/HomeAngajat.fxml"));
             Stage stage= new Stage();
             stage.setTitle("Sistem Gestionare Cafenea");
-            Scene scene=new Scene(log_in,700,500);
+            Scene scene=new Scene(log_in,600,400);
             stage.setScene(scene);
             stage.show();
             ((Node)(actionEvent.getSource())).getScene().getWindow().hide();
