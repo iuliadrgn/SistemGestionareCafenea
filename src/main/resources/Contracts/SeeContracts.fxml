@@ -1,19 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Contracts.SeeContracts">
-   <Label layoutX="264.0" layoutY="39.0" text="See Contracts" />
-   <Button layoutX="52.0" layoutY="35.0" mnemonicParsing="false" onAction="#Back" text="Back" />
-   <TableView fx:id="TableView" layoutX="19.0" layoutY="106.0" prefHeight="200.0" prefWidth="550.0">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #7a2137;" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Contracts.SeeContracts">
+   <ImageView fitHeight="402.0" fitWidth="600.0" layoutX="-1.0" opacity="0.54" pickOnBounds="true" preserveRatio="true">
+      <Image url="@../images/coffee17.jpg"/>
+   </ImageView>
+   <Label layoutX="200.0" layoutY="24.0" text="See Contracts" textFill="#a4bcbd">
+      <font>
+         <Font size="33.0" />
+      </font></Label>
+   <Button layoutX="19.0" layoutY="19.0" mnemonicParsing="false" onAction="#Back" opacity="0.94" prefHeight="29.0" prefWidth="64.0" style="-fx-background-color: #597c7d;" text="Back" textFill="#f2f2f2">
+      <font>
+         <Font size="13.0" />
+      </font></Button>
+   <TableView fx:id="TableView" layoutX="19.0" layoutY="106.0" opacity="0.69" prefHeight="274.0" prefWidth="560.0" style="-fx-background-color: #597c7d;">
       <columns>
          <TableColumn fx:id="product" prefWidth="94.0" text="product" />
          <TableColumn fx:id="price" prefWidth="90.0" text="price" />
          <TableColumn fx:id="number" prefWidth="91.0" text="number" />
          <TableColumn fx:id="state" prefWidth="93.0" text="state" />
-         <TableColumn fx:id="numef" prefWidth="81.0" text="numef" />
-         <TableColumn fx:id="data" prefWidth="100.0" text="data" />
+         <TableColumn fx:id="numef" prefWidth="87.0" text="numef" />
+         <TableColumn fx:id="data" prefWidth="104.0" text="data" />
 
       </columns>
    </TableView>
