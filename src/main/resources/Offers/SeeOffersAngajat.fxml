@@ -7,7 +7,7 @@
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #518569;" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Offers.SeeOffersAngajat">
     <ImageView fitHeight="400.0" fitWidth="608.0" opacity="0.8" pickOnBounds="true" preserveRatio="true">
-        <Image url="@../images/coffee20.jpg"/>
+        <Image url="@../images/coffee20.jpg" />
     </ImageView>
     <Label layoutX="233.0" layoutY="11.0" text="Offers" textFill="#d0e9ff">
         <font>
@@ -17,7 +17,7 @@
         <font>
             <Font size="13.0" />
         </font></Button>
-    <Button layoutX="189.0" layoutY="348.0" mnemonicParsing="false" onAction="#Respinge" opacity="0.87" style="-fx-background-color: #5aa5e7;" text="Respinge" textFill="#fffefe">
+    <Button layoutX="189.0" layoutY="348.0" mnemonicParsing="false" onAction="#Respinge" opacity="0.87" prefHeight="29.0" prefWidth="71.0" style="-fx-background-color: #5aa5e7;" text="Reject" textFill="#fffefe">
         <font>
             <Font size="13.0" />
         </font></Button>

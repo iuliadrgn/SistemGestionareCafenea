@@ -20,14 +20,14 @@ public class AddRequest {
     public ChoiceBox<String> UrgentField;
     public Text RequestMessage;
 
-    public void initialize() {UrgentField.getItems().addAll("Da","Nu");
+    public void initialize() {UrgentField.getItems().addAll("Yes","No");
     }
     public void Okay() {
         String name=NameField.getText();
         String number=NumberField.getText();
         if(name==null|| name.length()==0)
         {
-            RequestMessage.setText("Complete the name field");
+            RequestMessage.setText("Complete the product name field");
         }
         else
         if(UrgentField.getValue()==null)
