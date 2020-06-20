@@ -14,7 +14,7 @@
         </font>
     </Label>
     <ImageView fitHeight="300.0" fitWidth="275.0" opacity="0.38" pickOnBounds="true" preserveRatio="true">
-        <Image url="@../../../../../SistemGestionareCafenea1/src/main/resources/images/coffee6.jpg" />
+        <Image url="@../../../../../SistemGestionareCafenea/src/main/resources/images/coffee6.jpg" />
     </ImageView>
     <PasswordField fx:id="passwordField" layoutX="152.0" layoutY="125.0" opacity="0.93" prefHeight="25.0" prefWidth="229.0" promptText="password" style="-fx-background-color: #5c9e81;">
       <effect>
