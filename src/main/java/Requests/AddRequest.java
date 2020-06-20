@@ -1,6 +1,6 @@
 package Requests;
 
-import exceptions.RequestAlreadyExistsException;
+import exceptions.Requests.RequestAlreadyExistsException;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
@@ -10,7 +10,7 @@ import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.TextField;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
-import services.RequestService;
+import services.Request.RequestService;
 
 import java.io.IOException;
 
@@ -52,7 +52,7 @@ public class AddRequest {
 
     public void Back(ActionEvent actionEvent) {
         try{
-            Parent log_in= FXMLLoader.load(getClass().getResource("/SeeRequestsAngajat.fxml"));
+            Parent log_in= FXMLLoader.load(getClass().getResource("/Requests/SeeRequestsAngajat.fxml"));
             Stage stage= new Stage();
             stage.setTitle("Sistem Gestionare Cafenea");
             Scene scene=new Scene(log_in,500,300);

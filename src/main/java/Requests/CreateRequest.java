@@ -1,6 +1,6 @@
 package Requests;
 
-import exceptions.RequestAlreadyExistsException;
+import exceptions.Requests.RequestAlreadyExistsException;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
@@ -10,11 +10,9 @@ import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.TextField;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
-import services.RequestService;
+import services.Request.RequestService;
 
 import java.io.IOException;
-
-import static services.RequestService.*;
 
 public class CreateRequest {
     public TextField NameField;
@@ -29,7 +27,7 @@ public class CreateRequest {
         String number=NumberField.getText();
         if(name==null|| name.length()==0)
         {
-            RequestMessage.setText("Complete the name field");
+            RequestMessage.setText("Complete the product field!");
         }
         else
         if(UrgentField.getValue()==null)
@@ -39,7 +37,7 @@ public class CreateRequest {
         else
         if(number==null||number.length()==0)
         {
-            RequestMessage.setText("Complete the number field");
+            RequestMessage.setText("Complete the number field!");
         }
         else
             try {
@@ -54,10 +52,10 @@ public class CreateRequest {
 
     public void Back(ActionEvent actionEvent) {
         try{
-            Parent log_in= FXMLLoader.load(getClass().getResource("/HomeAngajat.fxml"));
+            Parent log_in= FXMLLoader.load(getClass().getResource("/HomeUsers/HomeAngajat.fxml"));
             Stage stage= new Stage();
             stage.setTitle("Sistem Gestionare Cafenea");
-            Scene scene=new Scene(log_in,700,500);
+            Scene scene=new Scene(log_in,600,400);
             stage.setScene(scene);
             stage.show();
             ((Node)(actionEvent.getSource())).getScene().getWindow().hide();

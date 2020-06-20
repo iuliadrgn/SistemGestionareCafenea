@@ -2,7 +2,7 @@ package Offers;
 
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import exceptions.CouldNotWriteOffersException;
+import exceptions.Offers.CouldNotWriteOffersException;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -18,8 +18,8 @@ import javafx.scene.control.cell.TextFieldTableCell;
 import javafx.stage.Stage;
 import models.Offer;
 import org.apache.commons.io.FileUtils;
-import services.FileSystemService;
-import services.OfferService;
+import services.FileSystem.FileSystemService;
+import services.Offer.OfferService;
 
 import java.io.IOException;
 import java.net.URL;
@@ -32,7 +32,7 @@ import java.util.ResourceBundle;
 public class SeeOffersFurnizor implements Initializable {
 
     private static List<Offer> offers;
-    private static final Path OFFER_PATH = FileSystemService.getPathToFile("ofr", "offers.json");
+    private static final Path OFFER_PATH = FileSystemService.getPathToFile("ofr", "Offers/offers.json");
     @FXML
     private javafx.scene.control.TableView<Offer> TableView;
 
@@ -49,10 +49,10 @@ public class SeeOffersFurnizor implements Initializable {
 
     public void Back(ActionEvent actionEvent) {
         try{
-            Parent log_in= FXMLLoader.load(getClass().getResource("/HomeFurnizor.fxml"));
+            Parent log_in= FXMLLoader.load(getClass().getResource("/HomeUsers/HomeFurnizor.fxml"));
             Stage stage= new Stage();
             stage.setTitle("Sistem Gestionare Cafenea");
-            Scene scene=new Scene(log_in,700,500);
+            Scene scene=new Scene(log_in,600,400);
             stage.setScene(scene);
             stage.show();
             ((Node)(actionEvent.getSource())).getScene().getWindow().hide();
@@ -82,7 +82,7 @@ public class SeeOffersFurnizor implements Initializable {
     private ObservableList<Offer> getPeople() throws IOException {
         ObservableList<Offer> oferte= FXCollections.observableArrayList();
         if (!Files.exists(OFFER_PATH)) {
-            FileUtils.copyURLToFile(Objects.requireNonNull(OfferService.class.getClassLoader().getResource("offers.json")), OFFER_PATH.toFile());
+            FileUtils.copyURLToFile(Objects.requireNonNull(OfferService.class.getClassLoader().getResource("Offers/offers.json")), OFFER_PATH.toFile());
         }
 
         ObjectMapper objectMapper = new ObjectMapper();

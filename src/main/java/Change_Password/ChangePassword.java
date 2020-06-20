@@ -1,10 +1,10 @@
 package Change_Password;
 
-import exceptions.CouldNotWriteUsersException;
+import exceptions.Users.CouldNotWriteUsersException;
 import models.User;
-import services.Criptare;
-import services.FileSystemService;
-import services.UserService;
+import services.PasswordEncrypt.Criptare;
+import services.FileSystem.FileSystemService;
+import services.User.UserService;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import javafx.event.ActionEvent;
@@ -27,7 +27,7 @@ import java.util.Objects;
 
 public class ChangePassword {
     private static List<User> users;
-    private static final Path USERS_PATH = FileSystemService.getPathToFile("config", "users.json");
+    private static final Path USERS_PATH = FileSystemService.getPathToFile("config", "Register/users.json");
     @FXML
     public Text ChangeMessage;
     @FXML
@@ -42,19 +42,22 @@ public class ChangePassword {
         String oldpassword = OldPasswordField.getText();
         String newpassword = NewPasswordField.getText();
         if (username == null || username.isEmpty()) {
-            ChangeMessage.setText("Invalid e-mail");
-            return;
-        } if (oldpassword == null || oldpassword.isEmpty()) {
-            ChangeMessage.setText("Invalid password");
+            ChangeMessage.setText("Invalid username!");
             return;
         }
+        else
+            if (oldpassword == null || oldpassword.isEmpty()) {
+            ChangeMessage.setText("Invalid password!");return;
+        } else
         if(newpassword==null||newpassword.isEmpty()){
-            ChangeMessage.setText("Introduce password");
-            return;
+            ChangeMessage.setText("Introduce password!");return;
         }
+        else
         if (!Files.exists(USERS_PATH)) {
-            FileUtils.copyURLToFile(Objects.requireNonNull(UserService.class.getClassLoader().getResource("users.json")), USERS_PATH.toFile());
+            FileUtils.copyURLToFile(Objects.requireNonNull(UserService.class.getClassLoader().getResource("Register/users.json")), USERS_PATH.toFile());
         }
+        else
+            ChangeMessage.setText("Invalid credentials!");
 
         ObjectMapper objectMapper = new ObjectMapper();
         users = objectMapper.readValue(USERS_PATH.toFile(), new TypeReference<List<User>>() {
@@ -67,7 +70,7 @@ public class ChangePassword {
                 ((Node)(actionEvent.getSource())).getScene().getWindow().hide();
                 try {
                     Stage stage = new Stage();
-                    Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("ChangedSuccessfully.fxml")));
+                    Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("Password/ChangedSuccessfully.fxml")));
                     stage.setTitle("Sistem Gestionare Cafenea");
                     stage.setScene(new Scene(root, 200, 100));
                     stage.show();
@@ -77,9 +80,6 @@ public class ChangePassword {
                 return;
             }
         }
-
-
-        ChangeMessage.setText("Invalid credentials");
     }
 
     private void persistUsers() {

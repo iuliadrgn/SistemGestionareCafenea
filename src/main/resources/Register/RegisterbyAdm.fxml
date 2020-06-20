@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="300.0" prefWidth="500.0" style="-fx-background-color: #3b6955;" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Register.RegisterbyAdm">
+    <Label layoutX="159.0" layoutY="20.0" prefHeight="38.0" prefWidth="217.0" text="Register Someone" textFill="#b2c229">
+        <font>
+            <Font size="26.0" />
+        </font>
+    </Label>
+    <ImageView fitHeight="300.0" fitWidth="275.0" opacity="0.38" pickOnBounds="true" preserveRatio="true">
+        <Image url="@../../../../../coffee6.jpg"/>
+    </ImageView>
+    <PasswordField fx:id="passwordField" layoutX="152.0" layoutY="125.0" opacity="0.93" prefHeight="25.0" prefWidth="229.0" promptText="password" style="-fx-background-color: #5c9e81;">
+      <effect>
+         <ColorAdjust brightness="0.02" contrast="0.07" saturation="-0.02" />
+      </effect></PasswordField>
+    <TextField fx:id="usernameField" layoutX="153.0" layoutY="78.0" opacity="0.93" prefHeight="25.0" prefWidth="229.0" promptText="username" style="-fx-background-color: #5c9e81;">
+      <opaqueInsets>
+         <Insets />
+      </opaqueInsets>
+      <effect>
+         <ColorAdjust brightness="0.02" contrast="0.07" saturation="-0.02" />
+      </effect></TextField>
+    <Button layoutX="207.0" layoutY="211.0" mnemonicParsing="false" onAction="#RegisterSomeone" opacity="0.77" prefHeight="25.0" prefWidth="115.0" style="-fx-background-color: #b2c229;" text="Register" textFill="WHITE" />
+    <ChoiceBox fx:id="role" layoutX="152.0" layoutY="166.0" opacity="0.93" prefHeight="25.0" prefWidth="229.0" style="-fx-background-color: #5c9e81;">
+      <effect>
+         <ColorAdjust brightness="0.02" contrast="0.07" saturation="-0.02" />
+      </effect></ChoiceBox>
+    <Text fx:id="registrationMessage" fill="#c3d0ca" layoutX="129.0" layoutY="269.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="275.0">
+      <font>
+         <Font size="16.0" />
+      </font></Text>
+    <Button layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#backButton" opacity="0.75" prefHeight="25.0" prefWidth="85.0" style="-fx-background-color: #b2c229;" text="Back" textFill="WHITE" />
+</AnchorPane>

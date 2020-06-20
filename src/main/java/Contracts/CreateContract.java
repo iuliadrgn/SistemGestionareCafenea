@@ -1,8 +1,7 @@
 package Contracts;
 
 import Offers.SeeOffersAngajat;
-import exceptions.ContractAlreadyExistsException;
-import exceptions.UsernameAlreadyExistsException;
+import exceptions.Contracts.ContractAlreadyExistsException;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
@@ -14,7 +13,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import models.Offer;
-import services.ContractService;
+import services.Contract.ContractService;
 
 
 import java.io.IOException;
@@ -55,7 +54,7 @@ try {
 
     public void Back(ActionEvent actionEvent) {
         try{
-            Parent log_in= FXMLLoader.load(getClass().getResource("/SeeOffersAngajat.fxml"));
+            Parent log_in= FXMLLoader.load(getClass().getResource("/Offers/SeeOffersAngajat.fxml"));
             Stage stage= new Stage();
             stage.setTitle("Sistem Gestionare Cafenea");
             Scene scene=new Scene(log_in,600,400);

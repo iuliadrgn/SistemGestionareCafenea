@@ -2,13 +2,16 @@ package services;
 
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import exceptions.UsernameAlreadyExistsException;
+import exceptions.Users.UsernameAlreadyExistsException;
 import models.User;
 import org.apache.commons.io.FileUtils;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
+import services.FileSystem.FileSystemService;
+import services.PasswordEncrypt.Criptare;
+import services.User.UserService;
 
 import java.io.IOException;
 import java.nio.file.Files;

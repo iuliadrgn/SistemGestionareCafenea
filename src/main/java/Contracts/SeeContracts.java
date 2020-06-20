@@ -12,14 +12,13 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 import models.Contract;
 import models.Offer;
 import org.apache.commons.io.FileUtils;
-import services.FileSystemService;
-import services.OfferService;
+import services.FileSystem.FileSystemService;
+import services.Offer.OfferService;
 
 import java.io.IOException;
 import java.net.URL;
@@ -32,7 +31,7 @@ import java.util.ResourceBundle;
 public class SeeContracts implements Initializable {
     public static Offer ofr;
     private static List<Contract> contracts;
-    private static final Path CONTRACT_PATH = FileSystemService.getPathToFile("contracts", "contracts.json");
+    private static final Path CONTRACT_PATH = FileSystemService.getPathToFile("contracts", "Contracts/contracts.json");
     @FXML
     public javafx.scene.control.TableView<Contract> TableView;
     @FXML
@@ -50,10 +49,10 @@ public class SeeContracts implements Initializable {
 
     public void Back(ActionEvent actionEvent) {
         try{
-            Parent log_in= FXMLLoader.load(getClass().getResource("/HomeAdministrator.fxml"));
+            Parent log_in= FXMLLoader.load(getClass().getResource("/HomeUsers/HomeAdministrator.fxml"));
             Stage stage= new Stage();
             stage.setTitle("Sistem Gestionare Cafenea");
-            Scene scene=new Scene(log_in,700,500);
+            Scene scene=new Scene(log_in,600,400);
             stage.setScene(scene);
             stage.show();
             ((Node)(actionEvent.getSource())).getScene().getWindow().hide();
@@ -81,7 +80,7 @@ public class SeeContracts implements Initializable {
     private ObservableList<Contract> getPeople() throws IOException {
         ObservableList<Contract> contracte= FXCollections.observableArrayList();
         if (!Files.exists(CONTRACT_PATH)) {
-            FileUtils.copyURLToFile(Objects.requireNonNull(OfferService.class.getClassLoader().getResource("contracts.json")), CONTRACT_PATH.toFile());
+            FileUtils.copyURLToFile(Objects.requireNonNull(OfferService.class.getClassLoader().getResource("Contracts/contracts.json")), CONTRACT_PATH.toFile());
         }
 
         ObjectMapper objectMapper = new ObjectMapper();
