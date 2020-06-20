@@ -13,7 +13,7 @@ import java.util.Objects;
 public class HomeAngajat {
     public void LogOut(ActionEvent actionEvent) {
         try{
-            Parent log_in= FXMLLoader.load(getClass().getResource("/login.fxml"));
+            Parent log_in= FXMLLoader.load(getClass().getResource("/Login/login.fxml"));
             Stage stage= new Stage();
             stage.setTitle("Sistem Gestionare Cafenea");
             Scene scene=new Scene(log_in,500,300);
@@ -28,7 +28,7 @@ public class HomeAngajat {
     public void ChangePassword(ActionEvent actionEvent) {
         try {
             Stage stage = new Stage();
-            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("ChangePassword.fxml")));
+            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("Password/ChangePassword.fxml")));
             stage.setTitle("Sistem Gestionare Cafenea");
             stage.setScene(new Scene(root, 400, 200));
             stage.show();
@@ -41,7 +41,7 @@ public class HomeAngajat {
     public void CreateRequest(ActionEvent actionEvent) {
         try {
             Stage stage = new Stage();
-            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("CreateRequest.fxml")));
+            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("Requests/CreateRequest.fxml")));
             stage.setTitle("Sistem Gestionare Cafenea");
             stage.setScene(new Scene(root, 500, 300));
             stage.show();
@@ -54,7 +54,7 @@ public class HomeAngajat {
     public void SeeOffers(ActionEvent actionEvent) {
         try {
             Stage stage = new Stage();
-            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("SeeOffersAngajat.fxml")));
+            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("Offers/SeeOffersAngajat.fxml")));
             stage.setTitle("Sistem Gestionare Cafenea");
             stage.setScene(new Scene(root, 600, 400));
             stage.show();
@@ -67,7 +67,7 @@ public class HomeAngajat {
     public void SeeRequests(ActionEvent actionEvent) {
         try {
             Stage stage = new Stage();
-            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("SeeRequestsAngajat.fxml")));
+            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("Requests/SeeRequestsAngajat.fxml")));
             stage.setTitle("Sistem Gestionare Cafenea");
             stage.setScene(new Scene(root, 500, 300));
             stage.show();

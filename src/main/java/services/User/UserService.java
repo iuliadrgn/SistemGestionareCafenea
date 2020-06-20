@@ -18,11 +18,11 @@ import java.util.Objects;
 public class UserService {
 
     public static List<User> users;
-    public static final Path USERS_PATH = FileSystemService.getPathToFile("config", "users.json");
+    public static final Path USERS_PATH = FileSystemService.getPathToFile("config", "Register/users.json");
 
     public static void loadUsersFromFile() throws IOException {
         if (!Files.exists(USERS_PATH)) {
-            FileUtils.copyURLToFile(Objects.requireNonNull(UserService.class.getClassLoader().getResource("users.json")), USERS_PATH.toFile());
+            FileUtils.copyURLToFile(Objects.requireNonNull(UserService.class.getClassLoader().getResource("Register/users.json")), USERS_PATH.toFile());
         }
 
         ObjectMapper objectMapper = new ObjectMapper();

@@ -69,7 +69,7 @@ public class CreateOffer {
 
     public void Back(ActionEvent actionEvent) {
         try{
-            Parent log_in= FXMLLoader.load(getClass().getResource("/HomeFurnizor.fxml"));
+            Parent log_in= FXMLLoader.load(getClass().getResource("/HomeUsers/HomeFurnizor.fxml"));
             Stage stage= new Stage();
             stage.setTitle("Sistem Gestionare Cafenea");
             Scene scene=new Scene(log_in,700,500);

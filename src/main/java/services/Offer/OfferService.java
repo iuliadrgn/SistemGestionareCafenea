@@ -18,12 +18,12 @@ import java.util.Objects;
 
 public class OfferService {
     public static List<Offer> offers;
-    public static final Path OFFER_PATH = FileSystemService.getPathToFile("ofr", "offers.json");
+    public static final Path OFFER_PATH = FileSystemService.getPathToFile("ofr", "Offers/offers.json");
 
     public static void loadOffersFromFile() throws IOException {
 
         if (!Files.exists(OFFER_PATH)) {
-            FileUtils.copyURLToFile(Objects.requireNonNull(OfferService.class.getClassLoader().getResource("offers.json")), OFFER_PATH.toFile());
+            FileUtils.copyURLToFile(Objects.requireNonNull(OfferService.class.getClassLoader().getResource("Offers/offers.json")), OFFER_PATH.toFile());
         }
 
         ObjectMapper objectMapper = new ObjectMapper();

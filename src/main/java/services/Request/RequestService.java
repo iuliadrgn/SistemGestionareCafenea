@@ -17,12 +17,12 @@ import java.util.Objects;
 
 public class RequestService {
     public static List<Request> requests;
-    public static final Path REQUEST_PATH = FileSystemService.getPathToFile("req", "requests.json");
+    public static final Path REQUEST_PATH = FileSystemService.getPathToFile("req", "Requests/requests.json");
 
     public static void loadRequestFromFile() throws IOException {
 
         if (!Files.exists(REQUEST_PATH)) {
-            FileUtils.copyURLToFile(Objects.requireNonNull(RequestService.class.getClassLoader().getResource("requests.json")), REQUEST_PATH.toFile());
+            FileUtils.copyURLToFile(Objects.requireNonNull(RequestService.class.getClassLoader().getResource("Requests/requests.json")), REQUEST_PATH.toFile());
         }
 
         ObjectMapper objectMapper = new ObjectMapper();

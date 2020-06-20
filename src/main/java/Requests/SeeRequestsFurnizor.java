@@ -30,7 +30,7 @@ import java.util.ResourceBundle;
 
 public class SeeRequestsFurnizor implements Initializable {
 
-    private static final Path REQUEST_PATH = FileSystemService.getPathToFile("req", "requests.json");
+    private static final Path REQUEST_PATH = FileSystemService.getPathToFile("req", "Requests/requests.json");
     @FXML
     public javafx.scene.control.TableView<Request> TableView;
     @FXML
@@ -42,7 +42,7 @@ public class SeeRequestsFurnizor implements Initializable {
 
     public void Back(ActionEvent actionEvent) {
         try{
-            Parent log_in= FXMLLoader.load(getClass().getResource("/HomeFurnizor.fxml"));
+            Parent log_in= FXMLLoader.load(getClass().getResource("/HomeUsers/HomeFurnizor.fxml"));
             Stage stage= new Stage();
             stage.setTitle("Sistem Gestionare Cafenea");
             Scene scene=new Scene(log_in,700,500);
@@ -77,7 +77,7 @@ public class SeeRequestsFurnizor implements Initializable {
     private ObservableList<Request> getPeople() throws IOException {
         ObservableList<Request> cereri= FXCollections.observableArrayList();
         if (!Files.exists(REQUEST_PATH)) {
-            FileUtils.copyURLToFile(Objects.requireNonNull(OfferService.class.getClassLoader().getResource("requests.json")), REQUEST_PATH.toFile());
+            FileUtils.copyURLToFile(Objects.requireNonNull(OfferService.class.getClassLoader().getResource("Requests/requests.json")), REQUEST_PATH.toFile());
         }
 
         ObjectMapper objectMapper = new ObjectMapper();
@@ -92,7 +92,7 @@ public class SeeRequestsFurnizor implements Initializable {
     public void CreateOffer(ActionEvent actionEvent) {
         try {
             Stage stage = new Stage();
-            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("CreateOffer.fxml")));
+            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("Offers/CreateOffer.fxml")));
             stage.setTitle("Sistem Gestionare Cafenea");
             stage.setScene(new Scene(root, 600, 400));
             stage.show();

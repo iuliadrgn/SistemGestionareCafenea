@@ -54,7 +54,7 @@ try {
 
     public void Back(ActionEvent actionEvent) {
         try{
-            Parent log_in= FXMLLoader.load(getClass().getResource("/SeeOffersAngajat.fxml"));
+            Parent log_in= FXMLLoader.load(getClass().getResource("/Offers/SeeOffersAngajat.fxml"));
             Stage stage= new Stage();
             stage.setTitle("Sistem Gestionare Cafenea");
             Scene scene=new Scene(log_in,600,400);

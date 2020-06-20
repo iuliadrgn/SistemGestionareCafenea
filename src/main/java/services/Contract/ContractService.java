@@ -20,12 +20,12 @@ import java.util.Objects;
 
 public class ContractService {
     public static List<Contract> contracts;
-    public static final Path CONTRACT_PATH = FileSystemService.getPathToFile("contracts", "contracts.json");
+    public static final Path CONTRACT_PATH = FileSystemService.getPathToFile("contracts", "Contracts/contracts.json");
 
     public static void loadContractsFromFile() throws IOException {
 
         if (!Files.exists(CONTRACT_PATH)) {
-            FileUtils.copyURLToFile(Objects.requireNonNull(ContractService.class.getClassLoader().getResource("contracts.json")), CONTRACT_PATH.toFile());
+            FileUtils.copyURLToFile(Objects.requireNonNull(ContractService.class.getClassLoader().getResource("Contracts/contracts.json")), CONTRACT_PATH.toFile());
         }
 
         ObjectMapper objectMapper = new ObjectMapper();

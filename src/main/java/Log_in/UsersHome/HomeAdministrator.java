@@ -15,7 +15,7 @@ public class HomeAdministrator {
 
     public void LogOut(ActionEvent actionEvent) {
         try{
-            Parent log_in= FXMLLoader.load(getClass().getResource("/login.fxml"));
+            Parent log_in= FXMLLoader.load(getClass().getResource("/Login/login.fxml"));
             Stage stage= new Stage();
             stage.setTitle("Sistem Gestionare Cafenea");
             Scene scene=new Scene(log_in,500,300);
@@ -30,7 +30,7 @@ public class HomeAdministrator {
     public void registerAorF(ActionEvent actionEvent) {
         try {
             Stage stage = new Stage();
-            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("RegisterbyAdm.fxml")));
+            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("Register/RegisterbyAdm.fxml")));
             stage.setTitle("Sistem Gestionare Cafenea");
             stage.setScene(new Scene(root, 500, 300));
             stage.show();
@@ -43,7 +43,7 @@ public class HomeAdministrator {
     public void ChangePassword(ActionEvent actionEvent) {
             try {
                 Stage stage = new Stage();
-                Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("ChangePassword.fxml")));
+                Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("Password/ChangePassword.fxml")));
                 stage.setTitle("Sistem Gestionare Cafenea");
                 stage.setScene(new Scene(root, 400, 200));
                 stage.show();
@@ -56,7 +56,7 @@ public class HomeAdministrator {
     public void SeeContracts(ActionEvent actionEvent) {
         try {
             Stage stage = new Stage();
-            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("SeeContracts.fxml")));
+            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("Contracts/SeeContracts.fxml")));
             stage.setTitle("Sistem Gestionare Cafenea");
             stage.setScene(new Scene(root, 600, 400));
             stage.show();

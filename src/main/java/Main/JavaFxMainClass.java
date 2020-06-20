@@ -23,7 +23,7 @@ public class JavaFxMainClass extends Application {
         OfferService.loadOffersFromFile();
         ContractService.loadContractsFromFile();
 
-        Parent root = FXMLLoader.load(getClass().getResource("/login.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/Login/login.fxml"));
         primaryStage.setTitle("Sistem Gestionare Cafenea");
         primaryStage.setScene(new Scene(root,500,300));
         primaryStage.show();

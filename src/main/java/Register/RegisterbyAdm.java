@@ -60,7 +60,7 @@ public class RegisterbyAdm {
 
     public void backButton(ActionEvent actionEvent) {
         try{
-            Parent log_in= FXMLLoader.load(getClass().getResource("/HomeAdministrator.fxml"));
+            Parent log_in= FXMLLoader.load(getClass().getResource("/HomeUsers/HomeAdministrator.fxml"));
             Stage stage= new Stage();
             stage.setTitle("Sistem Gestionare Cafenea");
             Scene scene=new Scene(log_in,700,500);

@@ -28,7 +28,7 @@ import java.util.Objects;
 
 public class LogIn {
     private static List<User> users;
-    private static final Path USERS_PATH=FileSystemService.getPathToFile("config","users.json");
+    private static final Path USERS_PATH=FileSystemService.getPathToFile("config", "Register/users.json");
     @FXML
     public Text LogInMessage;
     @FXML
@@ -50,7 +50,7 @@ public class LogIn {
         }
         else
         if (!Files.exists(USERS_PATH)) {
-            FileUtils.copyURLToFile(Objects.requireNonNull(UserService.class.getClassLoader().getResource("users.json")), USERS_PATH.toFile());
+            FileUtils.copyURLToFile(Objects.requireNonNull(UserService.class.getClassLoader().getResource("Register/users.json")), USERS_PATH.toFile());
         }
         else
             LogInMessage.setText("Invalid credentials!");
@@ -64,7 +64,7 @@ public class LogIn {
                 if(Objects.equals(user.getRole(),"Admin")){
                     try{
                         Stage stage=(Stage) LogInMessage.getScene().getWindow();
-                        Parent AdmHome= FXMLLoader.load(getClass().getResource("/HomeAdministrator.fxml"));
+                        Parent AdmHome= FXMLLoader.load(getClass().getResource("/HomeUsers/HomeAdministrator.fxml"));
                         Scene scene=new Scene(AdmHome,700,500);
                         stage.setScene(scene);
                     }catch(IOException e){
@@ -76,7 +76,7 @@ public class LogIn {
                 if(Objects.equals(user.getRole(),"Angajat")){
                     try{
                         Stage stage=(Stage) LogInMessage.getScene().getWindow();
-                        Parent AdmHome= FXMLLoader.load(getClass().getResource("/HomeAngajat.fxml"));
+                        Parent AdmHome= FXMLLoader.load(getClass().getResource("/HomeUsers/HomeAngajat.fxml"));
                         Scene scene=new Scene(AdmHome,700,500);
                         stage.setScene(scene);
                     }catch(IOException e){
@@ -86,7 +86,7 @@ public class LogIn {
                 if(Objects.equals(user.getRole(),"Furnizor")){
                     try{
                         Stage stage=(Stage) LogInMessage.getScene().getWindow();
-                        Parent AdmHome= FXMLLoader.load(getClass().getResource("/HomeFurnizor.fxml"));
+                        Parent AdmHome= FXMLLoader.load(getClass().getResource("/HomeUsers/HomeFurnizor.fxml"));
                         Scene scene=new Scene(AdmHome,700,500);
                         stage.setScene(scene);
                     }catch(IOException e){
@@ -105,7 +105,7 @@ public class LogIn {
 
     public void Register(ActionEvent actionEvent) throws IOException {
         Stage stage=new Stage();
-        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("Register.fxml")));
+        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("Register/Register.fxml")));
         stage.setTitle("Sistem Gestionare Cafenea");
         stage.setScene(new Scene(root, 500, 300));
         stage.show();

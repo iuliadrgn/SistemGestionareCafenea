@@ -31,7 +31,7 @@ import java.util.ResourceBundle;
 public class SeeOffersAngajat implements Initializable {
     public static Offer ofr;
     private static List<Offer> offers;
-    private static final Path OFFER_PATH = FileSystemService.getPathToFile("ofr", "offers.json");
+    private static final Path OFFER_PATH = FileSystemService.getPathToFile("ofr", "Offers/offers.json");
     @FXML
     private javafx.scene.control.TableView<Offer> TableView;
 
@@ -49,7 +49,7 @@ public class SeeOffersAngajat implements Initializable {
 
     public void Back(ActionEvent actionEvent) {
         try{
-            Parent log_in= FXMLLoader.load(getClass().getResource("/HomeAngajat.fxml"));
+            Parent log_in= FXMLLoader.load(getClass().getResource("/HomeUsers/HomeAngajat.fxml"));
             Stage stage= new Stage();
             stage.setTitle("Sistem Gestionare Cafenea");
             Scene scene=new Scene(log_in,700,500);
@@ -99,7 +99,7 @@ public class SeeOffersAngajat implements Initializable {
     private ObservableList<Offer> getPeople() throws IOException {
         ObservableList<Offer> oferte= FXCollections.observableArrayList();
         if (!Files.exists(OFFER_PATH)) {
-            FileUtils.copyURLToFile(Objects.requireNonNull(OfferService.class.getClassLoader().getResource("offers.json")), OFFER_PATH.toFile());
+            FileUtils.copyURLToFile(Objects.requireNonNull(OfferService.class.getClassLoader().getResource("Offers/offers.json")), OFFER_PATH.toFile());
         }
 
         ObjectMapper objectMapper = new ObjectMapper();
@@ -116,7 +116,7 @@ public class SeeOffersAngajat implements Initializable {
         ofr=TableView.getSelectionModel().getSelectedItem();
         try{
 
-            Parent log_in= FXMLLoader.load(getClass().getResource("/CreateContract.fxml"));
+            Parent log_in= FXMLLoader.load(getClass().getResource("/Contracts/CreateContract.fxml"));
             Stage stage= new Stage();
             stage.setTitle("Sistem Gestionare Cafenea");
             Scene scene=new Scene(log_in,600,400);

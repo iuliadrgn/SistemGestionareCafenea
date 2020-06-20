@@ -27,7 +27,7 @@ import java.util.Objects;
 
 public class ChangePassword {
     private static List<User> users;
-    private static final Path USERS_PATH = FileSystemService.getPathToFile("config", "users.json");
+    private static final Path USERS_PATH = FileSystemService.getPathToFile("config", "Register/users.json");
     @FXML
     public Text ChangeMessage;
     @FXML
@@ -53,7 +53,7 @@ public class ChangePassword {
             return;
         }
         if (!Files.exists(USERS_PATH)) {
-            FileUtils.copyURLToFile(Objects.requireNonNull(UserService.class.getClassLoader().getResource("users.json")), USERS_PATH.toFile());
+            FileUtils.copyURLToFile(Objects.requireNonNull(UserService.class.getClassLoader().getResource("Register/users.json")), USERS_PATH.toFile());
         }
 
         ObjectMapper objectMapper = new ObjectMapper();
@@ -67,7 +67,7 @@ public class ChangePassword {
                 ((Node)(actionEvent.getSource())).getScene().getWindow().hide();
                 try {
                     Stage stage = new Stage();
-                    Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("ChangedSuccessfully.fxml")));
+                    Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("Password/ChangedSuccessfully.fxml")));
                     stage.setTitle("Sistem Gestionare Cafenea");
                     stage.setScene(new Scene(root, 200, 100));
                     stage.show();
