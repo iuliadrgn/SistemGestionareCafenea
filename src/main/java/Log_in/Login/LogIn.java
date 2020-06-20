@@ -1,9 +1,9 @@
-package Log_in;
+package Log_in.Login;
 
 import models.User;
-import services.Criptare;
-import services.FileSystemService;
-import services.UserService;
+import services.PasswordEncrypt.Criptare;
+import services.FileSystem.FileSystemService;
+import services.User.UserService;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import javafx.event.ActionEvent;
@@ -20,11 +20,8 @@ import javafx.stage.Stage;
 import org.apache.commons.io.FileUtils;
 
 import java.io.IOException;
-import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
-import java.security.MessageDigest;
-import java.security.NoSuchAlgorithmException;
 import java.util.List;
 import java.util.Objects;
 
@@ -44,15 +41,19 @@ public class LogIn {
         String password=PasswordField.getText();
         if(username==null||username.isEmpty())
         {
-            LogInMessage.setText("Invalid e-mail adress");
+            LogInMessage.setText("Invalid username!");
         }
+        else
         if(password==null||password.isEmpty())
         {
-            LogInMessage.setText("Invalid Password");
+            LogInMessage.setText("Invalid Password!");
         }
+        else
         if (!Files.exists(USERS_PATH)) {
             FileUtils.copyURLToFile(Objects.requireNonNull(UserService.class.getClassLoader().getResource("users.json")), USERS_PATH.toFile());
         }
+        else
+            LogInMessage.setText("Invalid credentials!");
 
         ObjectMapper objectMapper = new ObjectMapper();
         //LogInMessage.setText("ok");
@@ -99,7 +100,6 @@ public class LogIn {
             }
 
         }
-        LogInMessage.setText("Invalid credentials");
 
     }
 

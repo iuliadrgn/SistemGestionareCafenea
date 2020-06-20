@@ -1,13 +1,14 @@
-package services;
+package services.Contract;
 
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import exceptions.ContractAlreadyExistsException;
-import exceptions.CouldNotWriteContractsException;
+import exceptions.Contracts.ContractAlreadyExistsException;
+import exceptions.Contracts.CouldNotWriteContractsException;
 
 import models.Contract;
 
 import org.apache.commons.io.FileUtils;
+import services.FileSystem.FileSystemService;
 
 import java.io.IOException;
 import java.nio.file.Files;

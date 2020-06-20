@@ -1,12 +1,14 @@
+package Main;
+
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-import services.ContractService;
-import services.OfferService;
-import services.RequestService;
-import services.UserService;
+import services.Contract.ContractService;
+import services.Offer.OfferService;
+import services.Request.RequestService;
+import services.User.UserService;
 
 import java.io.IOException;
 

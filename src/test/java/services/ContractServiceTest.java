@@ -2,15 +2,15 @@ package services;
 
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import exceptions.ContractAlreadyExistsException;
-import exceptions.RequestAlreadyExistsException;
+import exceptions.Contracts.ContractAlreadyExistsException;
 import models.Contract;
-import models.Request;
 import org.apache.commons.io.FileUtils;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
+import services.Contract.ContractService;
+import services.FileSystem.FileSystemService;
 
 import java.io.IOException;
 import java.nio.file.Files;

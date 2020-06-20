@@ -1,16 +1,14 @@
-package services;
+package services.Offer;
 
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-import exceptions.CouldNotWriteOffersException;
-import exceptions.CouldNotWriteRequestsException;
-import exceptions.OfferAlreadyExistsException;
-import exceptions.RequestAlreadyExistsException;
+import exceptions.Offers.CouldNotWriteOffersException;
+import exceptions.Offers.OfferAlreadyExistsException;
 import models.Offer;
 
-import models.Request;
 import org.apache.commons.io.FileUtils;
+import services.FileSystem.FileSystemService;
 
 import java.io.IOException;
 import java.nio.file.Files;

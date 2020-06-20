@@ -2,7 +2,7 @@ package Offers;
 
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import exceptions.CouldNotWriteOffersException;
+import exceptions.Offers.CouldNotWriteOffersException;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -18,8 +18,8 @@ import javafx.scene.control.cell.TextFieldTableCell;
 import javafx.stage.Stage;
 import models.Offer;
 import org.apache.commons.io.FileUtils;
-import services.FileSystemService;
-import services.OfferService;
+import services.FileSystem.FileSystemService;
+import services.Offer.OfferService;
 
 import java.io.IOException;
 import java.net.URL;

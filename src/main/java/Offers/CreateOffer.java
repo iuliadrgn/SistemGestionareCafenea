@@ -1,7 +1,6 @@
 package Offers;
 
-import exceptions.OfferAlreadyExistsException;
-import exceptions.RequestAlreadyExistsException;
+import exceptions.Offers.OfferAlreadyExistsException;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
@@ -11,8 +10,7 @@ import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.TextField;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
-import services.OfferService;
-import services.RequestService;
+import services.Offer.OfferService;
 
 
 import java.io.IOException;

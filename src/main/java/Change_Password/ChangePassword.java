@@ -1,10 +1,10 @@
 package Change_Password;
 
-import exceptions.CouldNotWriteUsersException;
+import exceptions.Users.CouldNotWriteUsersException;
 import models.User;
-import services.Criptare;
-import services.FileSystemService;
-import services.UserService;
+import services.PasswordEncrypt.Criptare;
+import services.FileSystem.FileSystemService;
+import services.User.UserService;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import javafx.event.ActionEvent;

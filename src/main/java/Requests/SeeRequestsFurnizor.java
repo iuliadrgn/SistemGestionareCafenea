@@ -12,14 +12,13 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.control.cell.TextFieldTableCell;
 import javafx.stage.Stage;
 import models.Request;
 import org.apache.commons.io.FileUtils;
-import services.FileSystemService;
-import services.OfferService;
+import services.FileSystem.FileSystemService;
+import services.Offer.OfferService;
 
 import java.io.IOException;
 import java.net.URL;

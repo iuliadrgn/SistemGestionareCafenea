@@ -1,4 +1,4 @@
-package exceptions;
+package exceptions.Offers;
 
 public class OfferAlreadyExistsException extends Exception{
     private String product;

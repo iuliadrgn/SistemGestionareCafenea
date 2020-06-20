@@ -1,6 +1,6 @@
 package Register;
 
-import exceptions.UsernameAlreadyExistsException;
+import exceptions.Users.UsernameAlreadyExistsException;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -12,7 +12,7 @@ import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
-import services.UserService;
+import services.User.UserService;
 
 import java.io.IOException;
 

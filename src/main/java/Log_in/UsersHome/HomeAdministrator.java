@@ -1,4 +1,4 @@
-package Log_in;
+package Log_in.UsersHome;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
@@ -10,7 +10,9 @@ import javafx.stage.Stage;
 import java.io.IOException;
 import java.util.Objects;
 
-public class HomeFurnizor {
+public class HomeAdministrator {
+
+
     public void LogOut(ActionEvent actionEvent) {
         try{
             Parent log_in= FXMLLoader.load(getClass().getResource("/login.fxml"));
@@ -25,26 +27,12 @@ public class HomeFurnizor {
         }
     }
 
-    public void ChangePassword(ActionEvent actionEvent) {
+    public void registerAorF(ActionEvent actionEvent) {
         try {
             Stage stage = new Stage();
-            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("ChangePassword.fxml")));
+            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("RegisterbyAdm.fxml")));
             stage.setTitle("Sistem Gestionare Cafenea");
-            stage.setScene(new Scene(root, 400, 200));
-            stage.show();
-            //((Node) (actionEvent.getSource())).getScene().getWindow().hide();
-        }catch(IOException e){
-            e.printStackTrace();
-        }
-    }
-
-
-    public void SeeOffers(ActionEvent actionEvent) {
-        try {
-            Stage stage = new Stage();
-            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("SeeOffersFurnizor.fxml")));
-            stage.setTitle("Sistem Gestionare Cafenea");
-            stage.setScene(new Scene(root, 600, 400));
+            stage.setScene(new Scene(root, 500, 300));
             stage.show();
             ((Node) (actionEvent.getSource())).getScene().getWindow().hide();
         }catch(IOException e){
@@ -52,10 +40,23 @@ public class HomeFurnizor {
         }
     }
 
-    public void SeeRequests(ActionEvent actionEvent) {
+    public void ChangePassword(ActionEvent actionEvent) {
+            try {
+                Stage stage = new Stage();
+                Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("ChangePassword.fxml")));
+                stage.setTitle("Sistem Gestionare Cafenea");
+                stage.setScene(new Scene(root, 400, 200));
+                stage.show();
+                //((Node) (actionEvent.getSource())).getScene().getWindow().hide();
+            }catch(IOException e){
+                e.printStackTrace();
+            }
+        }
+
+    public void SeeContracts(ActionEvent actionEvent) {
         try {
             Stage stage = new Stage();
-            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("SeeRequestsFurnizor.fxml")));
+            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("SeeContracts.fxml")));
             stage.setTitle("Sistem Gestionare Cafenea");
             stage.setScene(new Scene(root, 600, 400));
             stage.show();

@@ -1,10 +1,12 @@
-package exceptions;
+package exceptions.Requests;
+
+import static java.lang.String.format;
 
 public class RequestAlreadyExistsException extends Exception {
     private String name;
 
     public RequestAlreadyExistsException(String name) {
-        super(String.format("Request already exists!", name));
+        super(format("Request already exists!", name));
         this.name = name;
     }
 
