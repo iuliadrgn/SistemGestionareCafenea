@@ -65,7 +65,7 @@ public class LogIn {
                     try{
                         Stage stage=(Stage) LogInMessage.getScene().getWindow();
                         Parent AdmHome= FXMLLoader.load(getClass().getResource("/HomeUsers/HomeAdministrator.fxml"));
-                        Scene scene=new Scene(AdmHome,700,500);
+                        Scene scene=new Scene(AdmHome,600,400);
                         stage.setScene(scene);
                     }catch(IOException e){
                         e.printStackTrace();
@@ -77,7 +77,7 @@ public class LogIn {
                     try{
                         Stage stage=(Stage) LogInMessage.getScene().getWindow();
                         Parent AdmHome= FXMLLoader.load(getClass().getResource("/HomeUsers/HomeAngajat.fxml"));
-                        Scene scene=new Scene(AdmHome,700,500);
+                        Scene scene=new Scene(AdmHome,600,400);
                         stage.setScene(scene);
                     }catch(IOException e){
                         e.printStackTrace();
@@ -87,7 +87,7 @@ public class LogIn {
                     try{
                         Stage stage=(Stage) LogInMessage.getScene().getWindow();
                         Parent AdmHome= FXMLLoader.load(getClass().getResource("/HomeUsers/HomeFurnizor.fxml"));
-                        Scene scene=new Scene(AdmHome,700,500);
+                        Scene scene=new Scene(AdmHome,600,400);
                         stage.setScene(scene);
                     }catch(IOException e){
                         e.printStackTrace();

@@ -1,13 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
-<?import javafx.scene.text.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Log_in.UsersHome.HomeAdministrator">
-    <Text layoutX="246.0" layoutY="68.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Home Administrator" />
-    <Button layoutX="494.0" layoutY="24.0" mnemonicParsing="false" onAction="#LogOut" text="Log out" />
-   <Button layoutX="466.0" layoutY="81.0" mnemonicParsing="false" onAction="#registerAorF" text="Register Someone" />
-   <Button layoutX="469.0" layoutY="137.0" mnemonicParsing="false" onAction="#ChangePassword" text="ChangePassword" />
-   <Button layoutX="478.0" layoutY="200.0" mnemonicParsing="false" onAction="#SeeContracts" text="See Contracts" />
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #3f3159;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Log_in.UsersHome.HomeAdministrator">
+   <ImageView fitHeight="400.0" fitWidth="329.0" layoutX="-2.0" opacity="0.72" pickOnBounds="true" preserveRatio="true">
+      <Image url="@../../../../../coffee4.jpg"/>
+   </ImageView>
+   <Button layoutX="351.0" layoutY="133.0" mnemonicParsing="false" onAction="#registerAorF" prefHeight="29.0" prefWidth="227.0" style="-fx-background-color: #c0b2db;" text="Register Someone" textFill="#3f3159">
+      <font>
+         <Font size="15.0" />
+      </font></Button>
+    <Button layoutX="8.0" layoutY="14.0" mnemonicParsing="false" onAction="#LogOut" opacity="0.95" prefHeight="25.0" prefWidth="78.0" style="-fx-background-color: #3f3159;" text="Log out" textFill="#c0b2db">
+      <font>
+         <Font size="13.0" />
+      </font></Button>
+   <Button layoutX="351.0" layoutY="186.0" mnemonicParsing="false" onAction="#ChangePassword" prefHeight="29.0" prefWidth="227.0" style="-fx-background-color: #c0b2db;" text="ChangePassword" textFill="#3f3159">
+      <font>
+         <Font size="15.0" />
+      </font></Button>
+   <Button layoutX="351.0" layoutY="240.0" mnemonicParsing="false" onAction="#SeeContracts" prefHeight="29.0" prefWidth="227.0" style="-fx-background-color: #c0b2db;" text="See Contracts" textFill="#3f3159">
+      <font>
+         <Font size="15.0" />
+      </font></Button>
+   <Label layoutX="317.0" layoutY="36.0" opacity="0.89" text="inistrator" textFill="WHITE">
+      <font>
+         <Font size="23.0" />
+      </font>
+   </Label>
+   <Label layoutX="200.0" layoutY="36.0" text="Home Adm" textFill="#473768">
+      <font>
+         <Font size="23.0" />
+      </font>
+   </Label>
 </AnchorPane>
