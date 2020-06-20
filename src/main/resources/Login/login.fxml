@@ -31,6 +31,6 @@
       </font></Text>
     <Button layoutX="394.0" layoutY="261.0" mnemonicParsing="false" onAction="#Register" prefHeight="25.0" prefWidth="89.0" style="-fx-background-color: #d69158;" text="Register" textFill="#fff3ea" />
     <ImageView fitHeight="300.0" fitWidth="210.0" opacity="0.26" pickOnBounds="true" preserveRatio="true">
-        <Image url="@../../../../../coffee5.jpg"/>
+        <Image url="@../../../../../SistemGestionareCafenea1/src/main/resources/images/coffee5.jpg" />
     </ImageView>
 </AnchorPane>

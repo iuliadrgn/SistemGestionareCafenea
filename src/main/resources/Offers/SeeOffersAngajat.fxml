@@ -1,21 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Offers.SeeOffersAngajat">
-   <Label layoutX="262.0" layoutY="67.0" text="Offers" />
-   <Button layoutX="32.0" layoutY="32.0" mnemonicParsing="false" onAction="#Back" text="Back" />
-   <Button layoutX="189.0" layoutY="348.0" mnemonicParsing="false" onAction="#Respinge" text="Respinge" />
-   <TableView fx:id="TableView" layoutX="19.0" layoutY="106.0" prefHeight="200.0" prefWidth="550.0">
-     <columns>
-       <TableColumn fx:id="product" prefWidth="110" text="product" />
-       <TableColumn fx:id="price" prefWidth="110" text="price" />
-         <TableColumn fx:id="number" prefWidth="110" text="number" />
-         <TableColumn fx:id="state" prefWidth="110" text="state" />
-         <TableColumn fx:id="numef" prefWidth="110" text="numef" />
-         
-     </columns>
-   </TableView>
-   <Button layoutX="294.0" layoutY="348.0" mnemonicParsing="false" onAction="#Accept" text="Accept" />
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #518569;" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Offers.SeeOffersAngajat">
+    <ImageView fitHeight="400.0" fitWidth="608.0" opacity="0.8" pickOnBounds="true" preserveRatio="true">
+        <Image url="@../images/coffee20.jpg"/>
+    </ImageView>
+    <Label layoutX="233.0" layoutY="11.0" text="Offers" textFill="#d0e9ff">
+        <font>
+            <Font size="44.0" />
+        </font></Label>
+    <Button layoutX="19.0" layoutY="14.0" mnemonicParsing="false" onAction="#Back" opacity="0.69" prefHeight="25.0" prefWidth="65.0" style="-fx-background-color: #e8967d;" text="Back" textFill="WHITE">
+        <font>
+            <Font size="13.0" />
+        </font></Button>
+    <Button layoutX="189.0" layoutY="348.0" mnemonicParsing="false" onAction="#Respinge" opacity="0.87" style="-fx-background-color: #5aa5e7;" text="Respinge" textFill="#fffefe">
+        <font>
+            <Font size="13.0" />
+        </font></Button>
+    <TableView fx:id="TableView" layoutX="28.0" layoutY="84.0" opacity="0.83" prefHeight="252.0" prefWidth="527.0" style="-fx-background-color: #e8967d;">
+        <columns>
+            <TableColumn fx:id="product" prefWidth="104.0" text="product" />
+            <TableColumn fx:id="price" prefWidth="102.0" text="price" />
+            <TableColumn fx:id="number" prefWidth="111.0" text="number" />
+            <TableColumn fx:id="state" prefWidth="111.0" text="state" />
+            <TableColumn fx:id="numef" prefWidth="98.0" text="numef" />
+
+        </columns>
+    </TableView>
+    <Button layoutX="314.0" layoutY="348.0" mnemonicParsing="false" onAction="#Accept" opacity="0.87" prefHeight="29.0" prefWidth="71.0" style="-fx-background-color: #68b33d;" text="Accept" textFill="#f5f2f2">
+        <font>
+            <Font size="13.0" />
+        </font></Button>
 </AnchorPane>

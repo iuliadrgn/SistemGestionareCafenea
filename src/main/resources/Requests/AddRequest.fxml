@@ -1,22 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
-<?import javafx.scene.text.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="300.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Requests.AddRequest">
-    <TextField fx:id="NameField" layoutX="190.0" layoutY="93.0" />
-    <TextField fx:id="NumberField" layoutX="190.0" layoutY="138.0" />
-    <ChoiceBox fx:id="UrgentField" layoutX="190.0" layoutY="188.0" prefWidth="150.0" />
-    <Label layoutX="104.0" layoutY="97.0" text="Produs" />
-    <Label layoutX="104.0" layoutY="142.0" text="Nr. bucati" />
-    <Label layoutX="112.0" layoutY="192.0" text="Urgent" />
-    <Label layoutX="188.0" layoutY="27.0" text="Add Request">
+<AnchorPane prefHeight="380.0" prefWidth="500.0" style="-fx-background-color: #99291e;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Requests.AddRequest">
+    <ImageView fitHeight="403.0" fitWidth="356.0" layoutX="144.0" layoutY="-1.0" opacity="0.57" pickOnBounds="true"
+               preserveRatio="true">
+        <Image url="@../images/coffee13.jpg"/>
+    </ImageView>
+    <TextField fx:id="NameField" layoutX="22.0" layoutY="92.0" prefHeight="25.0" prefWidth="167.0" promptText="Produs" style="-fx-background-color: #e9d790;">
+        <opaqueInsets>
+            <Insets />
+        </opaqueInsets>
+        <effect>
+            <ColorAdjust brightness="-0.12" contrast="0.17" saturation="0.19" />
+        </effect></TextField>
+    <TextField fx:id="NumberField" layoutX="22.0" layoutY="138.0" prefHeight="25.0" prefWidth="167.0" promptText="Numar bucati" style="-fx-background-color: #e9d790;">
+        <effect>
+            <ColorAdjust brightness="-0.12" contrast="0.17" saturation="0.19" />
+        </effect></TextField>
+    <ChoiceBox fx:id="UrgentField" layoutX="22.0" layoutY="198.0" prefHeight="25.0" prefWidth="167.0" style="-fx-background-color: #e9d790;">
+        <effect>
+            <ColorAdjust brightness="-0.12" contrast="0.17" saturation="0.19" />
+        </effect></ChoiceBox>
+    <Label layoutX="81.0" layoutY="170.0" text="Urgent?" textFill="#e1d3d3">
         <font>
-            <Font size="23.0" />
+            <Font size="14.0" />
+        </font></Label>
+    <Label ellipsisString="" layoutX="145.0" layoutY="12.0" text="Add Request" textFill="WHITE">
+        <font>
+            <Font size="37.0" />
         </font>
     </Label>
-    <Text fx:id="RequestMessage" layoutX="253.0" layoutY="282.0" strokeType="OUTSIDE" strokeWidth="0.0" />
-    <Button layoutX="248.0" layoutY="226.0" mnemonicParsing="false" onAction="#Okay" text="OK" />
-    <Button layoutX="22.0" layoutY="14.0" mnemonicParsing="false" onAction="#Back" text="Back" />
+    <Text fx:id="RequestMessage" fill="#f8f7f7" layoutX="28.0" layoutY="332.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="160.00000470876694" />
+    <Button layoutX="78.0" layoutY="259.0" mnemonicParsing="false" onAction="#Okay" prefHeight="25.0" prefWidth="56.0" style="-fx-background-color: #ffe1a0;" text="OK" textFill="#dd8055" />
+    <Button layoutX="22.0" layoutY="14.0" mnemonicParsing="false" onAction="#Back" prefHeight="25.0" prefWidth="56.0" style="-fx-background-color: #dd8055;" text="Back" textFill="#f8f8f8" />
 </AnchorPane>
