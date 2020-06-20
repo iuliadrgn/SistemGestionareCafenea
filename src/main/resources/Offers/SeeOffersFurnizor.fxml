@@ -1,20 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Offers.SeeOffersFurnizor">
-   <Label layoutX="251.0" layoutY="24.0" prefHeight="38.0" prefWidth="74.0" text="See Offers" />
-   <Button layoutX="32.0" layoutY="32.0" mnemonicParsing="false" onAction="#Back" text="Back" />
-   <TableView fx:id="TableView" layoutX="19.0" layoutY="106.0" prefHeight="200.0" prefWidth="550.0">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #e0913e;" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Offers.SeeOffersFurnizor">
+   <ImageView fitHeight="400.0" fitWidth="640.0" layoutY="-2.0" opacity="0.73" pickOnBounds="true" preserveRatio="true">
+      <image>
+         <Image url="@../images/coffee22.jpg" />
+      </image>
+   </ImageView>
+   <Label layoutX="203.0" layoutY="14.0" prefHeight="58.0" prefWidth="196.0" text="See Offers" textFill="#f8e9cd">
+      <font>
+         <Font size="40.0" />
+      </font></Label>
+   <Button layoutX="17.0" layoutY="14.0" mnemonicParsing="false" onAction="#Back" opacity="0.93" prefHeight="29.0" prefWidth="57.0" style="-fx-background-color: #ab5717;" text="Back" textFill="#f5f2e1">
+      <font>
+         <Font size="13.0" />
+      </font></Button>
+   <TableView fx:id="TableView" layoutX="37.0" layoutY="68.0" opacity="0.86" prefHeight="264.0" prefWidth="527.0" style="-fx-background-color: #e3ab6f;">
       <columns>
          <TableColumn fx:id="product" onEditCommit="#editProduct" prefWidth="130.20001792907715" text="product" />
-         <TableColumn fx:id="price" onEditCommit="#editPrice" prefWidth="118.39999389648438" text="price" />
-         <TableColumn fx:id="number" onEditCommit="#editNumber" prefWidth="148.0" text="number" />
-         <TableColumn fx:id="state" onEditCommit="#editState" prefWidth="155.79995727539062" text="state" />
+         <TableColumn fx:id="price" onEditCommit="#editPrice" prefWidth="131.0" text="price" />
+         <TableColumn fx:id="number" onEditCommit="#editNumber" prefWidth="146.0" text="number" />
+         <TableColumn fx:id="state" onEditCommit="#editState" prefWidth="153.0" text="state" />
       </columns>
    </TableView>
-   <Button layoutX="275.0" layoutY="335.0" mnemonicParsing="false" onAction="#Delete" text="Delete" />
-   <Button layoutX="427.0" layoutY="335.0" mnemonicParsing="false" onAction="#Edit" text="Edit" />
-   <Button layoutX="118.0" layoutY="335.0" mnemonicParsing="false" onAction="#Add" text="Add" />
+   <Button layoutX="260.0" layoutY="348.0" mnemonicParsing="false" onAction="#Delete" opacity="0.87" prefHeight="29.0" prefWidth="64.0" style="-fx-background-color: #ab2117;" text="Delete" textFill="#f2bebe">
+      <font>
+         <Font size="13.0" />
+      </font></Button>
+   <Button layoutX="414.0" layoutY="348.0" mnemonicParsing="false" onAction="#Edit" opacity="0.89" prefHeight="29.0" prefWidth="64.0" style="-fx-background-color: #d1975a;" text="Edit" textFill="#fcf5f5">
+      <font>
+         <Font size="13.0" />
+      </font></Button>
+   <Button layoutX="119.0" layoutY="348.0" mnemonicParsing="false" onAction="#Add" opacity="0.9" prefHeight="29.0" prefWidth="64.0" style="-fx-background-color: #d1975a;" text="Add" textFill="WHITE">
+      <font>
+         <Font size="13.0" />
+      </font></Button>
 </AnchorPane>
