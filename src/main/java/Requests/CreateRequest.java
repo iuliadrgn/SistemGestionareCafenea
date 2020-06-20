@@ -27,7 +27,7 @@ public class CreateRequest {
         String number=NumberField.getText();
         if(name==null|| name.length()==0)
         {
-            RequestMessage.setText("Complete the name field");
+            RequestMessage.setText("Complete the product field!");
         }
         else
         if(UrgentField.getValue()==null)
@@ -37,7 +37,7 @@ public class CreateRequest {
         else
         if(number==null||number.length()==0)
         {
-            RequestMessage.setText("Complete the number field");
+            RequestMessage.setText("Complete the number field!");
         }
         else
             try {
