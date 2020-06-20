@@ -18,13 +18,13 @@ import java.io.IOException;
 
 public class RegisterbyAdm {
     @FXML
-    private Text registrationMessage;
+    public Text registrationMessage;
     @FXML
-    private PasswordField passwordField;
+    public PasswordField passwordField;
     @FXML
-    private TextField usernameField;
+    public TextField usernameField;
     @FXML
-    private ChoiceBox<String> role;
+    public ChoiceBox<String> role;
 
     @FXML
     public void initialize() {
@@ -37,7 +37,7 @@ public class RegisterbyAdm {
         String password=passwordField.getText();
         if(username==null|| username.length()==0)
         {
-            registrationMessage.setText("Invalid username");
+            registrationMessage.setText("Invalid username!");
         }
         else
         if(role.getValue()==null)
@@ -47,7 +47,7 @@ public class RegisterbyAdm {
         else
         if(password==null||password.length()==0)
         {
-            registrationMessage.setText("Invalid Password");
+            registrationMessage.setText("Invalid password!");
         }
         else
             try {

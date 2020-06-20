@@ -1,3 +1,5 @@
+package controllers;
+
 import Register.Register;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.PasswordField;

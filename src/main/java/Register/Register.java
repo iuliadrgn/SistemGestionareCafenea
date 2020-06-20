@@ -44,7 +44,7 @@ public class Register {
         } else
             try {
 
-                UserService.addUser(usernameField.getText(), passwordField.getText(), role.getValue());
+                UserService.addUser(usernameField.getText(), passwordField.getText(), role.getValue().toString());
                 registrationMessage.setText("Account created successfully!");
             } catch (UsernameAlreadyExistsException e) {
                 registrationMessage.setText(e.getMessage());
