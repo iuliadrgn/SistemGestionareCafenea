@@ -1,6 +1,4 @@
 package controllers;
-
-import Offers.AddOffer;
 import Offers.CreateOffer;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.TextField;

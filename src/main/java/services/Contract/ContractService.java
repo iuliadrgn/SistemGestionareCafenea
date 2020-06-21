@@ -7,6 +7,7 @@ import exceptions.Contracts.CouldNotWriteContractsException;
 
 import models.Contract;
 
+import models.Request;
 import org.apache.commons.io.FileUtils;
 import services.FileSystem.FileSystemService;
 
@@ -59,5 +60,8 @@ public class ContractService {
         } catch (IOException e) {
             throw new CouldNotWriteContractsException();
         }
+    }
+    public static List<Contract> getContracts() {
+        return contracts;
     }
 }
