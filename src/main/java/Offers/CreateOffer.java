@@ -27,7 +27,7 @@ public class CreateOffer {
     public void initialize() {state.getItems().addAll("Fresh","Frozen");
     }
 
-    public void ok(ActionEvent actionEvent)  {
+    public void ok()  {
         String prd=product.getText();
         String prc=price.getText();
         String nr=number.getText();

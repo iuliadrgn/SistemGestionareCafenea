@@ -31,7 +31,7 @@ public class CreateRequestTest extends ApplicationTest {
         RequestService.loadRequestFromFile();
         controller = new CreateRequest();
         controller.NameField = new TextField();
-        controller.NumberField = new PasswordField();
+        controller.NumberField = new TextField();
         controller.UrgentField = new ChoiceBox();
         controller.RequestMessage = new Text();
         controller.NameField.setText("Test1");

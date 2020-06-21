@@ -7,6 +7,7 @@ import exceptions.Offers.CouldNotWriteOffersException;
 import exceptions.Offers.OfferAlreadyExistsException;
 import models.Offer;
 
+import models.Request;
 import org.apache.commons.io.FileUtils;
 import services.FileSystem.FileSystemService;
 
@@ -58,5 +59,7 @@ public class OfferService {
         }
     }
 
-
+    public static List<Offer> getOffers() {
+        return offers;
+    }
 }
