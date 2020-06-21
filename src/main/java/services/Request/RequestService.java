@@ -6,12 +6,14 @@ import exceptions.Requests.RequestAlreadyExistsException;
 import models.Request;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import models.User;
 import org.apache.commons.io.FileUtils;
 import services.FileSystem.FileSystemService;
 
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.util.Collection;
 import java.util.List;
 import java.util.Objects;
 
@@ -54,7 +56,7 @@ public class RequestService {
         }
     }
 
-
-
-
+    public static List<Request> getRequests() {
+        return requests;
+    }
 }

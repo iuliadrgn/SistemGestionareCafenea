@@ -30,14 +30,14 @@ public class AddRequest {
             RequestMessage.setText("Complete the product name field");
         }
         else
-        if(UrgentField.getValue()==null)
-        {
-            RequestMessage.setText("Complete the choicebox!");
-        }
-        else
         if(number==null||number.length()==0)
         {
             RequestMessage.setText("Complete the number field");
+        }
+        else
+        if(UrgentField.getValue()==null)
+        {
+            RequestMessage.setText("Complete the choicebox!");
         }
         else
             try {

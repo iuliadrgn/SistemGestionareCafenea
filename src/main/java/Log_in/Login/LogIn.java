@@ -36,7 +36,7 @@ public class LogIn {
     @FXML
     public PasswordField PasswordField;
 
-    public void PressButton(ActionEvent actionEvent) throws IOException {
+    public void PressButton() throws IOException {
         String username=UsernameField.getText();
         String password=PasswordField.getText();
         if(username==null||username.isEmpty())
@@ -46,7 +46,7 @@ public class LogIn {
         else
         if(password==null||password.isEmpty())
         {
-            LogInMessage.setText("Invalid Password!");
+            LogInMessage.setText("Invalid password!");
         }
         else
         if (!Files.exists(USERS_PATH)) {

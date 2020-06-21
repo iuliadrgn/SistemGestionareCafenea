@@ -39,7 +39,7 @@ state.setText(o.getState());
 }
 
 
-    public void Ok(ActionEvent actionEvent) {
+    public void Ok() {
         if(data.getValue()==null)
         {ContractMessage.setText("Complete the date!"); }
         else
