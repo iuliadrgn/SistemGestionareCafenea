@@ -29,7 +29,7 @@ import java.util.Objects;
 import java.util.ResourceBundle;
 
 public class SeeRequestsFurnizor implements Initializable {
-
+    private static List<Request> requests;
     private static final Path REQUEST_PATH = FileSystemService.getPathToFile("req", "Requests/requests.json");
     @FXML
     public javafx.scene.control.TableView<Request> TableView;
@@ -74,7 +74,7 @@ public class SeeRequestsFurnizor implements Initializable {
 
     }
 
-    private ObservableList<Request> getPeople() throws IOException {
+    public ObservableList<Request> getPeople() throws IOException {
         ObservableList<Request> cereri= FXCollections.observableArrayList();
         if (!Files.exists(REQUEST_PATH)) {
             FileUtils.copyURLToFile(Objects.requireNonNull(OfferService.class.getClassLoader().getResource("Requests/requests.json")), REQUEST_PATH.toFile());
@@ -82,7 +82,7 @@ public class SeeRequestsFurnizor implements Initializable {
 
         ObjectMapper objectMapper = new ObjectMapper();
 
-        List<Request> requests = objectMapper.readValue(REQUEST_PATH.toFile(), new TypeReference<List<Request>>() {
+        requests = objectMapper.readValue(REQUEST_PATH.toFile(), new TypeReference<List<Request>>() {
         });
 
         cereri.addAll(requests);
@@ -101,5 +101,8 @@ public class SeeRequestsFurnizor implements Initializable {
             e.printStackTrace();
         }
 
+    }
+    public List<Request> getRequests(){
+        return requests;
     }
 }
