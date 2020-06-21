@@ -16,10 +16,6 @@
     <ImageView fitHeight="300.0" fitWidth="275.0" opacity="0.38" pickOnBounds="true" preserveRatio="true">
         <Image url="@../../../../../SistemGestionareCafenea/src/main/resources/images/coffee6.jpg" />
     </ImageView>
-    <PasswordField fx:id="passwordField" layoutX="152.0" layoutY="125.0" opacity="0.93" prefHeight="25.0" prefWidth="229.0" promptText="password" style="-fx-background-color: #5c9e81;">
-      <effect>
-         <ColorAdjust brightness="0.02" contrast="0.07" saturation="-0.02" />
-      </effect></PasswordField>
     <TextField fx:id="usernameField" layoutX="153.0" layoutY="78.0" opacity="0.93" prefHeight="25.0" prefWidth="229.0" promptText="username" style="-fx-background-color: #5c9e81;">
       <opaqueInsets>
          <Insets />
@@ -27,6 +23,10 @@
       <effect>
          <ColorAdjust brightness="0.02" contrast="0.07" saturation="-0.02" />
       </effect></TextField>
+    <PasswordField fx:id="passwordField" layoutX="152.0" layoutY="125.0" opacity="0.93" prefHeight="25.0" prefWidth="229.0" promptText="password" style="-fx-background-color: #5c9e81;">
+      <effect>
+         <ColorAdjust brightness="0.02" contrast="0.07" saturation="-0.02" />
+      </effect></PasswordField>
     <Button layoutX="207.0" layoutY="211.0" mnemonicParsing="false" onAction="#RegisterSomeone" opacity="0.77" prefHeight="25.0" prefWidth="115.0" style="-fx-background-color: #b2c229;" text="Register" textFill="WHITE" />
     <ChoiceBox fx:id="role" layoutX="152.0" layoutY="166.0" opacity="0.93" prefHeight="25.0" prefWidth="229.0" style="-fx-background-color: #5c9e81;">
       <effect>
