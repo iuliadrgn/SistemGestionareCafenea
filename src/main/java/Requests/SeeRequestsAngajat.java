@@ -79,7 +79,7 @@ public class SeeRequestsAngajat implements Initializable {
 
     }
 
-    private ObservableList<Request> getPeople() throws IOException {
+    public ObservableList<Request> getPeople() throws IOException {
         ObservableList<Request> cereri= FXCollections.observableArrayList();
         if (!Files.exists(REQUEST_PATH)) {
             FileUtils.copyURLToFile(Objects.requireNonNull(OfferService.class.getClassLoader().getResource("Requests/requests.json")), REQUEST_PATH.toFile());
@@ -144,5 +144,8 @@ public class SeeRequestsAngajat implements Initializable {
     public void editUrgent(TableColumn.CellEditEvent<Request, String> requestStringCellEditEvent) {
         Request req=TableView.getSelectionModel().getSelectedItem();
         req.setUrgent(requestStringCellEditEvent.getNewValue());
+    }
+    public List<Request> getRequests(){
+        return requests ;
     }
 }
