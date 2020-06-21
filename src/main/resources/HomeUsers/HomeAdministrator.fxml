@@ -7,7 +7,7 @@
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #3f3159;" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Log_in.UsersHome.HomeAdministrator">
    <ImageView fitHeight="400.0" fitWidth="329.0" layoutX="-2.0" opacity="0.72" pickOnBounds="true" preserveRatio="true">
-      <Image url="@../../../../../SistemGestionareCafenea/src/main/resources/images/coffee4.jpg" />
+      <Image url="@../images/coffee4.jpg" />
    </ImageView>
    <Button layoutX="351.0" layoutY="133.0" mnemonicParsing="false" onAction="#registerAorF" prefHeight="29.0" prefWidth="227.0" style="-fx-background-color: #c0b2db;" text="Register Someone" textFill="#3f3159">
       <font>

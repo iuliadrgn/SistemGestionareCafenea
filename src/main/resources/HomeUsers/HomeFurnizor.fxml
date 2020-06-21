@@ -7,7 +7,7 @@
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #59a88f;" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Log_in.UsersHome.HomeFurnizor">
     <ImageView fitHeight="441.0" fitWidth="338.0" layoutX="-3.0" layoutY="-5.0" opacity="0.68" pickOnBounds="true" preserveRatio="true">
-        <Image url="@../../../../../SistemGestionareCafenea/src/main/resources/images/coffee7.jpg" />
+        <Image url="@../images/coffee7.jpg" />
     </ImageView>
     <Text fill="#e1f7f0" layoutX="179.0" layoutY="56.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Home Furnizor">
         <font>
