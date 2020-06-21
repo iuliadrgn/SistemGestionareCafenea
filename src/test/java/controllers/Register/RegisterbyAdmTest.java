@@ -1,4 +1,4 @@
-package controllers;
+package controllers.Register;
 
 import Register.RegisterbyAdm;
 import javafx.scene.control.ChoiceBox;

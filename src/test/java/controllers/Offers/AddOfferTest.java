@@ -1,4 +1,4 @@
-package controllers;
+package controllers.Offers;
 
 import Offers.AddOffer;
 import Requests.AddRequest;

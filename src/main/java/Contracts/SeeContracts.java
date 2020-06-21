@@ -77,7 +77,7 @@ public class SeeContracts implements Initializable {
             e.printStackTrace();
         }
     }
-    private ObservableList<Contract> getPeople() throws IOException {
+    public ObservableList<Contract> getPeople() throws IOException {
         ObservableList<Contract> contracte= FXCollections.observableArrayList();
         if (!Files.exists(CONTRACT_PATH)) {
             FileUtils.copyURLToFile(Objects.requireNonNull(OfferService.class.getClassLoader().getResource("Contracts/contracts.json")), CONTRACT_PATH.toFile());
@@ -91,5 +91,8 @@ public class SeeContracts implements Initializable {
         contracte.addAll(contracts);
         return contracte;
 
+    }
+    public List<Contract> getContracts(){
+        return contracts ;
     }
 }

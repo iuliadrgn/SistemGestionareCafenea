@@ -1,4 +1,4 @@
-package controllers;
+package controllers.LogIn;
 
 import Log_in.Login.LogIn;
 import Register.Register;
