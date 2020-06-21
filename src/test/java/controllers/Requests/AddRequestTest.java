@@ -1,9 +1,12 @@
-package controllers;
-import Requests.CreateRequest;
+package controllers.Requests;
+
+import Register.RegisterbyAdm;
+import Requests.AddRequest;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.text.Text;
+import models.Request;
 import org.apache.commons.io.FileUtils;
 import org.junit.After;
 import org.junit.Before;
@@ -16,8 +19,8 @@ import services.User.UserService;
 
 import static junit.framework.TestCase.assertEquals;
 
-public class CreateRequestTest extends ApplicationTest {
-    private CreateRequest controller;
+public class AddRequestTest extends ApplicationTest {
+    private AddRequest controller;
 
     @BeforeClass
     public static void setupClass() throws Exception {
@@ -29,7 +32,7 @@ public class CreateRequestTest extends ApplicationTest {
     public void setUp() throws Exception {
         FileUtils.cleanDirectory(FileSystemService.getApplicationHomePath().toFile());
         RequestService.loadRequestFromFile();
-        controller = new CreateRequest();
+        controller = new AddRequest();
         controller.NameField = new TextField();
         controller.NumberField = new TextField();
         controller.UrgentField = new ChoiceBox();
@@ -58,13 +61,13 @@ public class CreateRequestTest extends ApplicationTest {
     public void testHandleAddNullUsernameActionCode() {
         controller.NameField.setText("");
         controller.Okay();
-        assertEquals("Complete the product field!", controller.RequestMessage.getText());
+        assertEquals("Complete the product name field", controller.RequestMessage.getText());
     }
     @Test
     public void testHandleAddNullPasswordActionCode() {
         controller.NumberField.setText("");
         controller.Okay();
-        assertEquals("Complete the number field!", controller.RequestMessage.getText());
+        assertEquals("Complete the number field", controller.RequestMessage.getText());
     }
     @Test
     public void testHandleAddNullChoiceboxActionCode() {

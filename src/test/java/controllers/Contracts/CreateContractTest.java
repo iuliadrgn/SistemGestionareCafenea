@@ -1,4 +1,4 @@
-package controllers;
+package controllers.Contracts;
 
 import Contracts.CreateContract;
 import Offers.CreateOffer;

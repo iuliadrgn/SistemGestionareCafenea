@@ -1,4 +1,4 @@
-package controllers;
+package controllers.Requests;
 
 import Requests.SeeRequestsAngajat;
 import javafx.collections.FXCollections;
